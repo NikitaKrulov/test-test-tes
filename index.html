@@ -8,23 +8,25 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./plugins/Accordion.JS/accordion.css">
-    <link rel="stylesheet" href="./scss/style.css?v=0.001"> <!-- ------- ЗАМЕНИТЬ ------- -->
+    <link rel="stylesheet" href="./css/style.css?v=0.001"> 
     <title>ИРБИС</title>
 </head>
 <body>
     <header class="header">
         <div class="headerContainer">
             <div class="headerContainer__logo">
-                <div class="headerContainer__logo-wrapper">
-                    <div class="headerContainer__logo-img">
-                        <img src="./img/LOGO.png" alt="ИРБИС">
-                    </div>
-                    <p class="headerContainer__logo-text">Институт Развития<br> Бизнеса и Стратегий</p>
-                    <a class="burger__button" style="z-index: 10000;">
+                <div class="headerContainer__logo-wrapper" href="">
+                    <a href="/index.html">
+                        <div class="headerContainer__logo-img">
+                            <img src="./img/LOGO.png" alt="ИРБИС">
+                        </div>
+                        <p class="headerContainer__logo-text">Институт Развития<br> Бизнеса и Стратегий</p>
+                    </a>
+                    <div class="burger__button" style="z-index: 10000;">
                         <div class="burger__menu-icon">
                             <span></span><span></span><span></span>
                         </div>
-                    </a>
+                    </div>
                     <div class="burger__menu">
                         <ul class="burger__menu-list" id="burger-dropdown">
                             <div class="container">
@@ -69,7 +71,7 @@
                                       <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
                                     </ul>
                                   </li>
-                                  <li class="burger__menu-item burger__menu-btn"><a class="burger__menu-button"href="">Хочу на бюджет!</a></li>
+                                  <li class="burger__menu-item burger__menu-btn"><a class="burger__menu-button pinkBtn"href="">Хочу на бюджет!</a></li>
                                   <li class="burger__menu-item"><a href="" class="navContainer__accessibility navContainer__accessibility-burger">Для слабовидящих</a></li>
                                   <li class="burger__menu-item burger__menu-info">
                                     <a href="tel:+78452401711" class="burger__menu-tel">8 (8452) 40-17-11</a>
@@ -88,7 +90,7 @@
                 <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
             </form>
             <div class="headerContainer__contacts">
-                <a class="headerContainer__contacts-button"href="">Хочу на бюджет!</a>
+                <a class="pinkBtn"href="">Хочу на бюджет!</a>
                 <div class="headerContainer__contacts-social">
                     <a href=""><span class="icon-VK"></span></a>
                     <a href=""><span class="icon-Telegram"></span></a>
@@ -105,14 +107,13 @@
         <div class="navContainer">
             <ul class="navContainer__list">
                 <li><a href="#">Главная</a></li>
-                <li><a href="#">Новости</a></li>
+                <li><a href="">Новости</a></li>
                 <li class="navContainer__list-dropdown">
                     <a href="#" class="navContainer__list-button">Колледж</a>
                     <div class="navContainer__list-wrapper">
                         <ul class="navContainer__list-dropdownContent">
-                            <li><a href="#">Ссылка 1</a></li>
-                            <li><a href="#">Ссылка 2</a></li>
-                            <li><a href="#">Ссылка 3</a></li>
+                            <li><a href="#">О колледже</a></li>
+                            <li><a href="#">Абитуриенту</a></li>
                         </ul>
                     </div>
                 </li>
@@ -169,9 +170,9 @@
                             <p>Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа, узнаете как мы живем!</p>
                         </div>
                         <div class="hero__slide-action">
-                            <a href="#" class="action__pink"><span>Записаться</span></a>
+                            <a href="#" class="action__pink pinkBtn"><span>Записаться</span></a>
                             <div class="btnConatiner">
-                                <a href="#" class="action__grey"><span class="icon-play"></span><span>Смотреть видео</span></a>
+                                <a href="#" class="action__grey grayBtn"><span class="icon-play"></span><span>Смотреть видео</span></a>
                                 <img src="./img/Vector 2.svg" alt="arrow">
                                 <p>Как это проходит?<br>
                                     Нажми и смотри</p>
@@ -187,9 +188,9 @@
                             <p>Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа, узнаете как мы живем!</p>
                         </div>
                         <div class="hero__slide-action">
-                            <a href="#" class="action__pink"><span>Записаться</span></a>
+                            <a href="#" class="action__pink pinkBtn"><span>Записаться</span></a>
                             <div class="btnConatiner">
-                                <a href="#" class="action__grey"><span class="icon-play"></span><span>Смотреть видео</span></a>
+                                <a href="#" class="action__grey grayBtn"><span class="icon-play"></span><span>Смотреть видео</span></a>
                                 <img src="./img/Vector 2.svg" alt="arrow">
                                 <p>Как это проходит?<br>
                                     Нажми и смотри</p>
@@ -205,9 +206,9 @@
                             <p>Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа, узнаете как мы живем!</p>
                         </div>
                         <div class="hero__slide-action">
-                            <a href="#" class="action__pink"><span>Записаться</span></a>
+                            <a href="#" class="action__pink pinkBtn"><span>Записаться</span></a>
                             <div class="btnConatiner">
-                                <a href="#" class="action__grey"><span class="icon-play"></span><span>Смотреть видео</span></a>
+                                <a href="#" class="action__grey grayBtn"><span class="icon-play"></span><span>Смотреть видео</span></a>
                                 <img src="./img/Vector 2.svg" alt="arrow">
                                 <p>Как это проходит?<br>
                                     Нажми и смотри</p>
@@ -223,9 +224,9 @@
                             <p>Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа, узнаете как мы живем!</p>
                         </div>
                         <div class="hero__slide-action">
-                            <a href="#" class="action__pink"><span>Записаться</span></a>
-                            <div class="btnConatiner">
-                                <a href="#" class="action__grey"><span class="icon-play"></span><span>Смотреть видео</span></a>
+                            <a href="#" class="action__pink pinkBtn"><span>Записаться</span></a>
+                            <div class="btnConatiner greyBtn">
+                                <a href="#" class="action__grey grayBtn "><span class="icon-play"></span><span>Смотреть видео</span></a>
                                 <img src="./img/Vector 2.svg" alt="arrow">
                                 <p>Как это проходит?<br>
                                     Нажми и смотри</p>
@@ -234,10 +235,20 @@
                     </div>
                     </div>
                 </div>
-                <div class="swiper-pagination hero__pagination "></div>
+                <div class="swiper-pagination hero__pagination"></div>
             </div>
             <div class="hero__img">
-                <div class="hero__img-container"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 943 640" fill="none">
+                    <path class="svg__path" fill-rule="evenodd" clip-rule="evenodd" d="M240 640L14.6447 414.645C-4.88156 395.118 -4.88155 363.46 14.6447 343.934L358.579 0H943V640H240Z" fill="url(#pattern0)"/>
+                    <rect class="svg__rect"x="0" y="0" width="943" height="640" fill="url(#pattern0)" clip-rule="evenodd" fill-rule="evenodd" style="overflow: visible;"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M240 640L14.6447 414.645C-4.88156 395.118 -4.88155 363.46 14.6447 343.934L358.579 0H943V640H240Z" fill="" fill-opacity="0.1" style="mix-blend-mode:color"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_68_1872" transform="matrix(0.000496841 0 0 0.000732064 -0.00876537 0)"/>
+                    </pattern>
+                    <image id="image0_68_1872" xlink:href="./img/bg0.png"></image>
+                    </defs>
+                </svg>
             </div>
         </div>
         <div class="about">
@@ -270,7 +281,7 @@
                 <div class="about__radioContainer-text">
                     <h3 class="bannerHeader">Студенты ИРБиС в прямом эфире</h3>
                     <p class="bannerTitle">на радиостанции Серебряный дождь</p>
-                    <a href=""><span class="icon-play"></span>Смотреть трансляцию</a>
+                    <a href="" class="pinkBtn"><span class="icon-play "></span>Смотреть трансляцию</a>
                 </div>
                 <div class="about__radioContainer-microImg">
                     <img src="./img/microphone_PNG7913 1.png" alt="Micro">
@@ -364,7 +375,7 @@
                     </div>
                 </div>
                 <div class="news__swipper-allNews">
-                    <a href="">Все новости</a>
+                    <a href="" class="grayBtn">Все новости</a>
                 </div>
             </div>
         </div>
@@ -379,7 +390,7 @@
                         дверей <span>онлайн</span></h3>
                     <p class="bannerOpDoorDiscription">Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа, узнаете как мы живем!</p>
                     <div class="specialties__bannerOpDoor-footer">
-                        <a href="">Записаться</a>
+                        <a href="" class="pinkBtn">Записаться</a>
                         <div class="specialtiesTextAndArrow">
                             <img src="./img/Vector 3.svg" alt="arrow">
                             <p>Приходи и посмотри<br> 
@@ -396,7 +407,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Декоративно – прикладное искусство и народные промыслы</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -406,7 +417,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Экономика и бухгалтерский учёт</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -416,7 +427,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Туризм</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -426,7 +437,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Право и организация социального обеспечения</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -436,7 +447,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Банковское дело</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -446,7 +457,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Коммерция</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -456,7 +467,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Информационные системы и программирование</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -466,7 +477,7 @@
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
                             <p class="cardCollege__content-title">Сестринское дело</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
@@ -474,16 +485,15 @@
                     <div class="cardCollege">
                         <div class="cardCollege__content">
                             <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
-                            <p class="cardCollege__content-title">МВА – Мастер Делового администрирования</p>
+                            <p class="cardCollege__content-title">Наши будущие специальности</p>
                             <div class="cardCollege__content-action">
-                                <a href="" class="cardCollege__content-wantBudgetBtn"><span>Хочу на бюджет!</span></a>
                                 <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="specialties__college-showAll">
-                    <a href="">Показать ещё</a>
+                    <a href="" class="grayBtn">Показать ещё</a>
                     <div class="specialties__college-arrow">
                         <p>Выбирай своё!</p>
                         <img src="./img/Vector 3.svg" alt="arrow">
@@ -496,7 +506,7 @@
                     <p class="bannerTitle">Заменить текст. Ждем всех, кого интересует качественное бизнес-образование! Вы познакомитесь с образовательными программами Бизнес-Колледжа.</p>                  
                 </div>
                 <div class="specialties__banner-action">
-                    <a href="">Узнать подробнее</a>
+                    <a href="" class="pinkBtn">Узнать подробнее</a>
                     <img src="./img/case.png" alt="Case">
                 </div>
             </div>
@@ -506,7 +516,7 @@
                 <div class="reviewsContainer__header">
                     <h2 class="heading">Отзывы студентов<span class="icon-comment titleIcon"></span></h2>
                     <div class="reviewsContainer__action">
-                        <a href="#" class="reviewsContainer__action-leftBtn"><span class="icon-arrow"></span></a>
+                        <a href="#" class="reviewsContainer__action-leftBtn "><span class="icon-arrow"></span></a>
                         <a href="#" class="reviewsContainer__action-rightBtn"><span class="icon-arrow"></span></a>
                     </div> 
                 </div>
@@ -541,7 +551,7 @@
                                 <p class="reviewsCard__header-name">Варвара Кантемирова</p>
                             </div>
                             <p class="reviewsCard__content">
-                                Впечатления от обучения остались положительные благодаря гибкости преподавательского состава, а также возможностям обучения, которые представлялись некоторыми из преподавателей и профессоров. Те практические навыки, которые я получил, помогли мне не только при написании диплома, но и для понимания структуры гостинично-ресторанного бизнеса в целом.
+                                Впечатления от обучения остались положительные благодаря гибкости преподавательского состава, а также возможностям обучения, которые представлялись некоторыми из преподавателей и профессоров. Те практические навыки, которые я получил, помогли мне не только при написании диплома, но и для понимания структуры гостинично-ресторанного бизнеса в целом.
                             </p>
                         </div>
                     </div>
@@ -609,7 +619,7 @@
             <div class="questions__form">
                 <div class="banner">
                     <div class="banner__content">
-                        <h2 class="header banner__header">Подать заявку</h2>
+                        <h2 class="heading banner__header">Подать заявку</h2>
                         <p class="discription banner__discription">Подайте заявку на обучение в нашем колледже.<br>Мы рассмотрим её в ближайшее время и свяжемся с вами. </p>
                         <div class="banner__form">
                             <form action="">
@@ -626,7 +636,7 @@
                                     </select>
                                 <textarea name="" id="" placeholder="Сопроводительное сообщение"></textarea>
                                 <div class="banner__form-submit">
-                                    <input type="submit" value="Подать заявку на бюджет" >
+                                    <input type="submit" value="Подать заявку на бюджет" class="pinkBtn" >
                                     <p class="privicy">Нажимая на кнопку, вы принимаете условия <a href="">пользовательского соглашения </a>и даёте <a href="">согласие на обработку персональных данных</a></p>
                                 </div>
                             </form>
