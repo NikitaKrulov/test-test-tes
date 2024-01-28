@@ -1,5 +1,4 @@
 
-
 .footer{
     background-color: #2D3038;
     color: #FFF;
@@ -148,7 +147,12 @@
 
 }
 
-
+@media screen and (max-width: 1061px){
+    .footerContainer__header-adress{
+      white-space: normal;
+      width: 97%;
+    }
+  }
 @media screen and (max-width: 992px) {
     .footerContainer{
       &__header{
@@ -172,8 +176,12 @@
           padding: 25px 0;
         }
         &-contacts{
-          padding: 25px 0;
-        }
+            padding: 0 0 25px;
+            flex-direction: row-reverse;
+          }
+          &-tel{
+            text-align: left;
+          }
       }
       &__middle{
         flex-wrap: wrap;

@@ -104,6 +104,13 @@ a{
   line-height: normal;
   position: relative;
 }
+.headerThree{
+  color: #495677;
+  @include fluid(font-size, 30px , 40px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -206,13 +213,11 @@ a{
   align-items: center;
   &__logo{
     &-wrapper a{
-      color:#2D3038;
       display: flex;
       align-items: center;
       white-space: nowrap;
       width: 30%;
       z-index: 60;
-      background-color: #fff;
       font-weight: 600;
     }
     img{object-fit: contain;@include fluid(width, 100px, 136px);@include fluid(height, 70px, 100px);}
@@ -642,7 +647,30 @@ a{
 
 }
 
-
+.breadcrumb{
+  @include container;
+  display: flex;
+  gap: 10px;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 17.5px */
+  @include fluid(margin-bottom, 30px , 50px);@include fluid(margin-top, 30px , 50px);
+  &__link{
+      color: #A3ACC5;
+  }
+  &__slash{
+      color: #A3ACC5;
+  }
+  &__page{
+      color: #2D3038;
+  }
+}
+.pink{
+  color: #FF2574;
+}
 @media screen and (max-width:1186px){
   nav{
     position: relative;
@@ -756,6 +784,7 @@ a{
         padding: 10px 0;
         display: flex;
         align-items: center;
+        background-color: #fff;
         a{
           width: 100%;
         }
@@ -874,6 +903,7 @@ a{
   }
 }
 @media screen and (max-width: 576px) {
+  .breadcrumb{margin: 20px 0;}
   .about__radioContainer-text .pinkBtn{
     padding-left: 18px;padding-right: 18px;
   }
@@ -883,6 +913,9 @@ a{
   .heading{
     font-size: 24px;
   }
+  .headerThree{
+    font-size: 20px;
+}
   .discription{
     font-size: 14px;
   }

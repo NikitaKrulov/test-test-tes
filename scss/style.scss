@@ -1199,155 +1199,6 @@
 }
 
 
-.footer{
-  background-color: #2D3038;
-  color: #FFF;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.footerContainer{
-  @include fluid(padding-top, 20px, 40px);@include fluid(padding-bottom, 20px, 40px);
-  @include container;
-  &__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include fluid(gap, 15px, 40px);
-    @include fluid(padding-bottom, 20px, 40px);
-    border-bottom: #495677 solid 1px;
-    &-logo{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img{object-fit: contain;@include fluid(width, 100px, 136px);@include fluid(height, 70px, 100px);}
-      p{
-        @include fluid(font-size, 14px, 18px);
-        @include fluid(margin-left, 7px, 15px);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 125%; 
-        text-transform: uppercase;
-        white-space: nowrap;
-      }
-    }
-    &-adress{
-      font-size: 16px;
-      white-space: nowrap;
-      p:last-child{
-        color: #A3ACC5;
-        font-variant-numeric: lining-nums proportional-nums;
-        font-size: 14px;
-        margin-top: 5px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 125%; 
-      }
-    }
-    &-contacts{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: right;
-    }
-    &-social{
-      justify-content: space-between;
-      display: flex;
-      @include fluid(margin-right, 30px, 80px);@include fluid(margin-left, 20px, 60px);
-      gap: 30px;
-      font-size: 24px;
-      align-items: center;
-      a{display: flex;align-items: center;justify-content: center;}
-      span{
-        color: #A3ACC5;
-      }
-    }
-    &-phone{
-      display: flex;
-      flex-direction: column
-    }
-    &-tel {
-      @include fluid(font-size, 16px, 20px);
-      font-style: normal;
-      font-weight: 800;
-      line-height: 125%; 
-      color: #FFF;
-      &::before{
-        content: "\e909";
-        font-family: "icomoon";
-        color: #FF2574;
-        @include fluid(font-size, 16px, 20px);
-        @include fluid(margin-right, 8px, 15px);
-      }
-    }
-    &-email {
-      color: #FF2574;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-    &-contacts--mobile{
-      display: none;
-    }
-    &-adress--mobile{
-      display: none;
-    }
-  }
-  &__middle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include fluid(padding-top, 20px, 40px);@include fluid(padding-bottom, 60px, 120px);
-    border-bottom: #495677 solid 1px;
-    font-size: 16px;
-    &-links{
-      display: flex;
-      align-items: center;
-      @include fluid(gap, 30px, 60px);
-      a{
-        color: #FFF;
-      }
-    }
-    &-privicy a{
-      color:#A3ACC5;
-    }
-    &-privicy--mobile{
-      display: none;
-    }
-  }
-  &__bottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include fluid(padding-top, 20px, 40px);
-    color:#A3ACC5 ;
-    @include fluid(font-size, 14px, 16px);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 125%;
-    &-develop{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color:#A3ACC5 !important ;
-      text-align: right;
-      font-family: Raleway;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 125%; 
-      gap: 20px;
-      img{
-        object-fit: contain;
-      }
-    }
-  }
-  &__middle-mobile{
-    display: none;
-  }
-  
-}
-
-
 @media screen and (max-width: 992px) {
   .circle,.circleBtn,.circleBtn-pink,.circleBtn-detailBtn{
     display: none;
@@ -1504,6 +1355,8 @@
   }
   .about__radioContainer{
     margin-top: 45px;
+    background-image: url(/img/MicroBGnn.svg);
+    background-size: cover;
   }
   .about__radioContainer-connect{
     display: none;
@@ -1514,7 +1367,8 @@
       padding-bottom: 0;
     }
   }
-  .specialties__bannerOpDoor{
+  .specialties{
+    padding-bottom: 0;
     flex-direction: column;
     align-items: center;
     &-video{
@@ -1525,10 +1379,12 @@
         width: 100%;
       }
     }
-  }
-  .specialties__bannerOpDoor-content{
-    @include fluid(padding-top, 20px , 40px);@include fluid(padding-bottom,20px , 40px);
-    width: 100%;
+    &__bannerOpDoor{
+      &-content{
+        @include fluid(padding-top, 20px , 40px);@include fluid(padding-bottom,20px , 40px);
+        width: 100%;
+      }
+    }
   }
   .specialtiesTextAndArrow{
     display: none;
@@ -1550,6 +1406,7 @@
     background-image: url(/img/MicroBGnn.svg);
     background-size: cover;
     margin-top: 45px;
+    margin-bottom: 60px;
     &-text{
       width: 75%;
     }
@@ -1571,7 +1428,8 @@
     width: 15%;
   }
   .banner{
-    background-size: 100% 100%;
+    background-image: url(/img/MicroBGnn.svg);
+    background-size: cover;
     &__img{
       display: block;
       &-notepad{
@@ -1585,37 +1443,6 @@
     }
     &__content{
       width: 100%;
-    }
-  }
-  .footerContainer{
-    &__header{
-      flex-wrap: wrap;
-      &-logo{
-        justify-content: start;
-        width: 100%;
-        border-bottom: #495677 solid 1px;
-        padding-bottom: 25px;
-        img{
-          width: 68px;
-          height: 50px;
-        }
-        p{
-          margin: 10px 20px;
-          width: 60%;
-          text-align: left;
-        }
-      }
-      &-adress{
-        padding: 25px 0;
-      }
-      &-contacts{
-        padding: 25px 0;
-      }
-    }
-    &__middle{
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
     }
   }
 }
@@ -2013,7 +1840,7 @@
 
   }
   .specialties{
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
   .specialties__banner{
     box-shadow: 15px 15px 0 0 #E2E7F4;
@@ -2101,17 +1928,15 @@
   .banner__form-submit{
     margin-top: 15px;
   }
-
-  
-
-}
-@media screen and (max-width: 576px){
   .specialties__bannerOpDoor-video video{
     object-fit: contain;
     height: 100%;
     width: 100%;
   }
+  
+
 }
+
 @media screen and (max-width: 400px) {
   .hero__img{
     height: 230px;
