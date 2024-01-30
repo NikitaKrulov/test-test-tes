@@ -210,15 +210,23 @@
     }
 }
 @media screen and (max-width:992px) {
+    .breadcrumb{
+        margin: 20px auto;
+    }
+    .news{
+        margin-bottom: 30px;
+    }
     .newsCard{
         width: 48%;
         &--last{
             margin: 0;
         }
         &:hover{
-        .newsCard__footer{color: #495677;}
-            
+        .newsCard__footer{color: #495677;}  
         }
+    }
+    .news__heading {
+        margin-bottom: 30px;
     }
     .questionSwiper{
         &__slide{

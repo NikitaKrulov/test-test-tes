@@ -507,6 +507,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   margin-left: 15px;
+  color: #495677;
 }
 @media (min-width: 992px) {
   .headerContainer__logo-text {
@@ -842,6 +843,7 @@ a {
   padding-top: 19px;
   padding-top: 10px;
   position: absolute;
+  right: -50px;
 }
 @media (min-width: 992px) {
   .navContainer__list-wrapper {
@@ -855,7 +857,8 @@ a {
 }
 .navContainer__list-dropdown {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  gap: 5px;
 }
 .navContainer__list-dropdownContent {
   display: none;
@@ -907,17 +910,27 @@ a {
   color: #000000;
   border-radius: 10px;
 }
-.navContainer__list-button {
-  gap: 10px;
-}
-.navContainer__list-button::after {
-  display: inline-block;
-  content: "\e905";
+.navContainer__list span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "icomoon";
-  font-size: 8px;
+  font-size: 14px;
   color: #A3ACC5;
+  width: 100%;
+  height: 100%;
   position: relative;
-  transition: all 0.38s ease-in-out;
+  transform: rotate(-90deg);
+}
+@media (min-width: 992px) {
+  .navContainer__list span {
+    font-size: calc(0.0021551724 * 100vw + 11.8620689655px);
+  }
+}
+@media (min-width: 1920px) {
+  .navContainer__list span {
+    font-size: 16px;
+  }
 }
 .navContainer__list a {
   display: flex;
@@ -932,6 +945,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
 }
 .navContainer__accessibility::before {
   content: "\e908";
@@ -950,17 +964,8 @@ a {
   }
 }
 
-.navContainer .navContainer__list-dropdown:hover .navContainer__list-dropdownContent {
+.navContainer__list-dropdown:hover .navContainer__list-wrapper .navContainer__list-dropdownContent {
   display: block;
-}
-
-.navContainer__list-dropdownContent:hover {
-  display: block;
-}
-
-.navContainer .navContainer__list-dropdown:hover .navContainer__list-button::after {
-  color: #FF2574;
-  transform: rotate(-180deg);
 }
 
 .container {
@@ -1322,8 +1327,45 @@ a {
   .navContainer::-webkit-scrollbar {
     display: none;
   }
-  .navContainer .navContainer__list-dropdown:hover .navContainer__list-wrapper {
+  .navContainer__list-wrapper {
+    display: none;
+  }
+  #dropdown2 {
+    min-width: 185px;
+  }
+  #dropdown3 {
+    min-width: 122px;
+  }
+  #dropdown4 {
+    min-width: 198px;
+  }
+  .navContainer__list {
+    align-items: baseline;
+  }
+  .navContainer__list-dropdown--active {
     position: relative;
+    display: inline-flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    flex: 50%;
+  }
+  .navContainer__list-dropdown--active span {
+    width: 10px;
+    height: 10px;
+  }
+  .navContainer__list-dropdownContent--active {
+    display: block;
+  }
+  .navContainer__list-wrapper--active {
+    display: contents;
+  }
+  .navContainer__list-dropdownContent {
+    display: none;
+  }
+  .navContainer__list-dropdownContent--active {
+    display: block;
   }
   .burger__menu-list.open {
     display: none;
@@ -1484,8 +1526,8 @@ a {
     padding: 0;
     position: absolute;
     z-index: 5;
-    overflow-y: scroll;
-    overflow-x: visible;
+    overflow-y: visible;
+    overflow-x: scroll;
     align-items: start;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -1515,6 +1557,7 @@ a {
   .navContainer__list-wrapper {
     padding: 0;
     margin-top: 10px;
+    right: 0;
   }
   .navContainer__list-dropdownContent {
     padding: 20px;
@@ -1536,9 +1579,6 @@ a {
   }
   .navContainer::-webkit-scrollbar {
     display: none;
-  }
-  .navContainer .navContainer__list-dropdown:hover .navContainer__list-wrapper {
-    position: relative;
   }
   .dropdown:not(:hover).burger__menu-item-dropdown--content {
     display: none;
@@ -2659,6 +2699,12 @@ a {
   }
 }
 @media screen and (max-width: 992px) {
+  .breadcrumb {
+    margin: 20px auto;
+  }
+  .news {
+    margin-bottom: 30px;
+  }
   .newsCard {
     width: 48%;
   }
@@ -2667,6 +2713,9 @@ a {
   }
   .newsCard:hover .newsCard__footer {
     color: #495677;
+  }
+  .news__heading {
+    margin-bottom: 30px;
   }
   .questionSwiper__slide {
     flex-direction: column-reverse;

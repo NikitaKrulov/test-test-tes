@@ -344,9 +344,64 @@ function updateImage(slideIndex) {
       });
     }
   }
+  document.addEventListener('DOMContentLoaded', function () {
+    const iconArrows = document.querySelectorAll('.icon-arrow');
+    const dropdowns = document.querySelectorAll('.navContainer__list-dropdown');
+    const wrappers = document.querySelectorAll('.navContainer__list-wrapper');
+    const dropdownContents = document.querySelectorAll('.navContainer__list-dropdownContent');
   
-
-
+    function closeAllDropdowns() {
+      iconArrows.forEach((iconArrow, index) => {
+        const dropdown = dropdowns[index];
+        const wrapper = wrappers[index];
+        const content = dropdownContents[index];
+  
+        if (dropdown && wrapper && content) {
+          dropdown.classList.remove('navContainer__list-dropdown--active');
+          wrapper.classList.remove('navContainer__list-wrapper--active');
+          content.classList.remove('navContainer__list-dropdownContent--active');
+        }
+      });
+    }
+  
+    function toggleDropdown(index) {
+      closeAllDropdowns();
+  
+      const dropdown = dropdowns[index];
+      const wrapper = wrappers[index];
+      const content = dropdownContents[index];
+  
+      if (dropdown && wrapper && content) {
+        const isActive = dropdown.classList.contains('navContainer__list-dropdown--active');
+  
+        dropdown.classList.toggle('navContainer__list-dropdown--active', !isActive);
+        wrapper.classList.toggle('navContainer__list-wrapper--active', !isActive);
+        content.classList.toggle('navContainer__list-dropdownContent--active', !isActive);
+      }
+    }
+  
+    iconArrows.forEach((iconArrow, index) => {
+      iconArrow.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleDropdown(index);
+      });
+    });
+  
+    document.addEventListener('click', function (event) {
+      const isDropdown = event.target.closest('.navContainer__list-dropdown');
+      if (!isDropdown) {
+        closeAllDropdowns();
+      }
+    });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 
@@ -360,14 +415,94 @@ jQuery(document).ready(function($){
   //  all ----------------------------
   function expandCardCircle(event, element) {
     let timeoutId;
+    let circle;
   
-    const existingCircle = element.querySelector('.circle');
+    function createCircle() {
+      circle = document.createElement('div');
+      circle.classList.add('circle');
+      element.appendChild(circle);
+  
+      const rect = element.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+  
+      circle.style.left = x + 'px';
+      circle.style.top = y + 'px';
+      circle.style.transform = 'translate(-50%, -50%) scale(0)';
+      void circle.offsetWidth;
+  
+      circle.style.width = circle.style.height = Math.max(rect.width, rect.height) * 3 + 'px';
+      circle.style.transform = 'translate(-50%, -50%) scale(1)';
+    }
+  
+    function resetCardCircle() {
+      if (circle) {
+        circle.style.transform = 'translate(-50%, -50%) scale(0)';
+        timeoutId = setTimeout(() => {
+          circle.remove();
+        }, 200);
+      }
+    }
+  
+    function handleMouseLeave() {
+      resetCardCircle();
+      element.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mousemove', checkCardCursor);
+    }
+  
+    function checkCardCursor(e) {
+      const rect = element.getBoundingClientRect();
+      if (
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
+      ) {
+        resetCardCircle();
+        document.removeEventListener('mousemove', checkCardCursor);
+        element.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    }
+  
+    createCircle();
+  
+    document.addEventListener('mousemove', checkCardCursor);
+    element.addEventListener('mouseleave', handleMouseLeave);
+  }
+  
+  const cards = document.querySelectorAll('.about__cardContainer-card');
+  cards.forEach((card) => {
+    card.addEventListener('mouseenter', (event) => expandCardCircle(event, card));
+  
+    card.addEventListener('mousemove', (event) => {
+      event.stopPropagation();
+    });
+  });
+  
+  const cardsCollege = document.querySelectorAll('.cardCollege');
+  cardsCollege.forEach((card) => {
+    card.addEventListener('mouseenter', (event) => expandCardCircle(event, card));
+  
+    card.addEventListener('mousemove', (event) => {
+      event.stopPropagation();
+    });
+  });
+  
+  
+
+  //  grey  ----------------------------
+  let timeoutIdBtn;
+
+  function expandBtnCircle(event, element) {
+    clearTimeout(timeoutIdBtn);
+  
+    const existingCircle = element.querySelector('.circleBtn');
     if (existingCircle) {
       return;
     }
   
     const circle = document.createElement('div');
-    circle.classList.add('circle');
+    circle.classList.add('circleBtn');
     element.appendChild(circle);
   
     const rect = element.getBoundingClientRect();
@@ -382,187 +517,105 @@ jQuery(document).ready(function($){
     circle.style.width = circle.style.height = Math.max(rect.width, rect.height) * 3 + 'px';
     circle.style.transform = 'translate(-50%, -50%) scale(1)';
   
-    document.addEventListener('mousemove', checkCardCursor);
-    element.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mousemove', checkBtnCursor);
   
-    function checkCardCursor(event) {
+    function checkBtnCursor(event) {
       if (
         event.clientX < rect.left ||
         event.clientX > rect.right ||
         event.clientY < rect.top ||
         event.clientY > rect.bottom
       ) {
-        resetCardCircle(element);
-        document.removeEventListener('mousemove', checkCardCursor);
-      }
-    }
-  
-    function handleMouseLeave() {
-      resetCardCircle(element);
-      element.removeEventListener('mouseleave', handleMouseLeave);
-    }
-  
-    function resetCardCircle(element) {
-      const circle = element.querySelector('.circle');
-      if (circle) {
-        circle.style.transform = 'translate(-50%, -50%) scale(0)';
-        timeoutId = setTimeout(() => {
-          circle.remove();
-        }, 200); 
+        resetBtnCircle(element);
+        document.removeEventListener('mousemove', checkBtnCursor);
       }
     }
   }
   
-  const cards = document.querySelectorAll('.about__cardContainer-card');
-  cards.forEach(card => {
-    card.addEventListener('mouseenter', (event) => expandCardCircle(event, card));
-    card.addEventListener('mouseleave', () => {
-      resetCardCircle(card);
-    });
-    card.addEventListener('mousemove', (event) => {
-      event.stopPropagation();
-    });
-  });
-  
-  const cardsCollege = document.querySelectorAll('.cardCollege');
-  cardsCollege.forEach(card => {
-    card.addEventListener('mouseenter', (event) => expandCardCircle(event, card));
-    card.addEventListener('mouseleave', () => {
-      resetCardCircle(card);
-    });
-    card.addEventListener('mousemove', (event) => {
-      event.stopPropagation();
-    });
-  });
-  
-
-  //  grey  ----------------------------
-let timeoutIdBtn;
-
-function expandBtnCircle(event, element) {
-  clearTimeout(timeoutIdBtn);
-
-  const existingCircle = element.querySelector('.circleBtn');
-  if (existingCircle) {
-    return;
-  }
-
-  const circle = document.createElement('div');
-  circle.classList.add('circleBtn');
-  element.appendChild(circle);
-
-  const rect = element.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
-
-  circle.style.left = x + 'px';
-  circle.style.top = y + 'px';
-  circle.style.transform = 'translate(-50%, -50%) scale(0)';
-  void circle.offsetWidth;
-
-  circle.style.width = circle.style.height = Math.max(rect.width, rect.height) * 3 + 'px';
-  circle.style.transform = 'translate(-50%, -50%) scale(1)';
-
-  document.addEventListener('mousemove', checkBtnCursor);
-
-  function checkBtnCursor(event) {
-    if (
-      event.clientX < rect.left ||
-      event.clientX > rect.right ||
-      event.clientY < rect.top ||
-      event.clientY > rect.bottom
-    ) {
-      resetBtnCircle(element);
-      document.removeEventListener('mousemove', checkBtnCursor);
+  function resetBtnCircle(element) {
+    const circle = element.querySelector('.circleBtn');
+    if (circle) {
+      circle.style.transform = 'translate(-50%, -50%) scale(0)';
+      timeoutIdBtn = setTimeout(() => {
+        circle.remove();
+      }, 200);
     }
   }
-}
-
-function resetBtnCircle(element) {
-  const circle = element.querySelector('.circleBtn');
-  if (circle) {
-    circle.style.transform = 'translate(-50%, -50%) scale(0)';
-    timeoutIdBtn = setTimeout(() => {
-      circle.remove();
-    }, 200);
-  }
-}
-
-const greyBtns = document.querySelectorAll('.grayBtn');
-greyBtns.forEach(btn => {
-  btn.addEventListener('mouseenter', (event) => expandBtnCircle(event, btn));
-  btn.addEventListener('mouseleave', () => {
-    resetBtnCircle(btn);
+  
+  const greyBtns = document.querySelectorAll('.grayBtn');
+  greyBtns.forEach((btn) => {
+    btn.addEventListener('mouseenter', (event) => expandBtnCircle(event, btn));
+    btn.addEventListener('mouseleave', () => {
+      resetBtnCircle(btn);
+    });
+    btn.addEventListener('mousemove', (event) => {
+      event.stopPropagation();
+    });
   });
-  btn.addEventListener('mousemove', (event) => {
-    event.stopPropagation();
-  });
-});
-
-
+  
   //  pink ----------------------------
-let timeoutIdBtnPink;
+  let timeoutIdBtnPink;
 
-function expandBtnPinkCircle(event, element) {
-  clearTimeout(timeoutIdBtnPink);
-
-  const existingCircle = element.querySelector('.circleBtn-pink');
-  if (existingCircle) {
-    return;
-  }
-
-  const circle = document.createElement('div');
-  circle.classList.add('circleBtn-pink');
-  element.appendChild(circle);
-
-  const rect = element.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
-
-  circle.style.left = x + 'px';
-  circle.style.top = y + 'px';
-  circle.style.transform = 'translate(-50%, -50%) scale(0)';
-  void circle.offsetWidth;
-
-  circle.style.width = circle.style.height = Math.max(rect.width, rect.height) * 3 + 'px';
-  circle.style.transform = 'translate(-50%, -50%) scale(1)';
-
-  document.addEventListener('mousemove', checkBtnPinkCursor);
-
-  function checkBtnPinkCursor(event) {
-    if (
-      event.clientX < rect.left ||
-      event.clientX > rect.right ||
-      event.clientY < rect.top ||
-      event.clientY > rect.bottom
-    ) {
-      resetBtnPinkCircle(element);
-      document.removeEventListener('mousemove', checkBtnPinkCursor);
+  function expandBtnPinkCircle(event, element) {
+    clearTimeout(timeoutIdBtnPink);
+  
+    const existingCircle = element.querySelector('.circleBtn-pink');
+    if (existingCircle) {
+      return;
+    }
+  
+    const circle = document.createElement('div');
+    circle.classList.add('circleBtn-pink');
+    element.appendChild(circle);
+  
+    const rect = element.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+  
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
+    circle.style.transform = 'translate(-50%, -50%) scale(0)';
+    void circle.offsetWidth;
+  
+    circle.style.width = circle.style.height = Math.max(rect.width, rect.height) * 3 + 'px';
+    circle.style.transform = 'translate(-50%, -50%) scale(1)';
+  
+    document.addEventListener('mousemove', checkBtnPinkCursor);
+  
+    function checkBtnPinkCursor(event) {
+      if (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      ) {
+        resetBtnPinkCircle(element);
+        document.removeEventListener('mousemove', checkBtnPinkCursor);
+      }
     }
   }
-}
-
-function resetBtnPinkCircle(element) {
-  const circle = element.querySelector('.circleBtn-pink');
-  if (circle) {
-    circle.style.transform = 'translate(-50%, -50%) scale(0)';
-    timeoutIdBtnPink = setTimeout(() => {
-      circle.remove();
-    }, 200);
+  
+  function resetBtnPinkCircle(element) {
+    const circle = element.querySelector('.circleBtn-pink');
+    if (circle) {
+      circle.style.transform = 'translate(-50%, -50%) scale(0)';
+      timeoutIdBtnPink = setTimeout(() => {
+        circle.remove();
+      }, 200);
+    }
   }
-}
-
-const pinkBtns = document.querySelectorAll('.pinkBtn');
-pinkBtns.forEach(btn => {
-  btn.addEventListener('mouseenter', (event) => expandBtnPinkCircle(event, btn));
-  btn.addEventListener('mouseleave', () => {
-    resetBtnPinkCircle(btn);
+  
+  const pinkBtns = document.querySelectorAll('.pinkBtn');
+  pinkBtns.forEach((btn) => {
+    btn.addEventListener('mouseenter', (event) => expandBtnPinkCircle(event, btn));
+    btn.addEventListener('mouseleave', () => {
+      resetBtnPinkCircle(btn);
+    });
+    btn.addEventListener('mousemove', (event) => {
+      event.stopPropagation();
+    });
   });
-  btn.addEventListener('mousemove', (event) => {
-    event.stopPropagation();
-  });
-});
-
+  
 // deatil ----------------------------------------
 
 let timeoutIdBtnDetail;
@@ -617,7 +670,7 @@ function resetBtnDetailCircle(element) {
 }
 
 const detailBtns = document.querySelectorAll('.cardCollege__content-detailBtn');
-detailBtns.forEach(btn => {
+detailBtns.forEach((btn) => {
   btn.addEventListener('mouseenter', (event) => expandBtnDetailCircle(event, btn));
   btn.addEventListener('mouseleave', () => {
     resetBtnDetailCircle(btn);
@@ -626,6 +679,3 @@ detailBtns.forEach(btn => {
     event.stopPropagation();
   });
 });
-
-
-
