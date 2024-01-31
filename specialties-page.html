@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/LOGO.png" type="image/x-icon">
+        <link rel="stylesheet" href="./fonts/icomoon-v1.0/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./plugins/Accordion.JS/accordion.css">
+        <link rel="stylesheet" href="./css/style-specialtiesPage.css?v=0.001"> 
+        <title>ИРБИС</title>
+    </head>
+<body>
+    <header class="header">
+        <div class="headerContainer">
+            <div class="headerContainer__logo">
+                <div class="headerContainer__logo-wrapper" href="">
+                    <a href="/index.html">
+                        <div class="headerContainer__logo-img">
+                            <img src="./img/LOGO.png" alt="ИРБИС">
+                        </div>
+                        <p class="headerContainer__logo-text">Институт Развития<br> Бизнеса и Стратегий</p>
+                    </a>
+                    <div class="burger__button">
+                        <div class="burger__menu-icon">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="burger__menu">
+                        <ul class="burger__menu-list" id="burger-dropdown">
+                            <div class="container">
+                                <form class="burger__menu-search">
+                                    <div class="input__conatiner">
+                                        <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
+                                    </div>
+                                </form>
+                                <li class="burger__menu-item"><a href="#">Главная</a></li>
+                                <li class="burger__menu-item"><a href="#">Новости</a></li>
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Колледж</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="burger__menu-item" ><a href="#">Специальности</a></li>              
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Жизнь наших студентов</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Школа бизнеса</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Сведения об организации</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="burger__menu-item burger__menu-btn"><a class="burger__menu-button pinkBtn"href="">Хочу на бюджет!</a></li>
+                                  <li class="burger__menu-item"><a href="" class="navContainer__accessibility navContainer__accessibility-burger">Для слабовидящих</a></li>
+                                  <li class="burger__menu-item burger__menu-info">
+                                    <a href="tel:+78452401711" class="burger__menu-tel">8 (8452) 40-17-11</a>
+                                    <a href="mailto:irbis.edu.saratov@gmail.com" class="burger__menu-email ">irbis.edu.saratov@gmail.com</a>
+                                  </li>
+                                  <li class="burger__menu-item burger__menu-social">
+                                    <a href=""><span class="icon-VK"></span></a>
+                                    <a href=""><span class="icon-Telegram"></span></a>
+                                  </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form class="headerContainer__search">
+                <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
+            </form>
+            <div class="headerContainer__contacts">
+                <a class="pinkBtn"href="">Хочу на бюджет!</a>
+                <div class="headerContainer__contacts-social">
+                    <a href=""><span class="icon-VK"></span></a>
+                    <a href=""><span class="icon-Telegram"></span></a>
+                </div>
+                <div class="headerContainer__contacts-info">
+                    <a href="tel:+78452401711" class="headerContainer__contacts-tel">8 (8452) 40-17-11</a>
+                    <a href="mailto:irbis.edu.saratov@gmail.com" class="headerContainer__contacts-email">irbis.edu.saratov@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="line"></div>
+    <nav class="nav">
+        <div class="navContainer">
+          <ul class="navContainer__list">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Новости</a></li>
+            <li id="dropdown1" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Колледж</a><span id="arrow1" class="icon-arrow"></span>
+              <div id="wrapper1" class="navContainer__list-wrapper">
+                <ul id="content1" class="navContainer__list-dropdownContent">
+                  <li><a href="#">О колледже</a></li>
+                  <li><a href="#">Абитуриенту</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Специальности</a></li>
+            <li id="dropdown2" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Жизнь наших студентов</a><span id="arrow2" class="icon-arrow"></span>
+              <div id="wrapper2" class="navContainer__list-wrapper">
+                <ul id="content2" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li id="dropdown3" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Школа бизнеса</a><span id="arrow3" class="icon-arrow"></span>
+              <div id="wrapper3" class="navContainer__list-wrapper">
+                <ul id="content3" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li id="dropdown4" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Сведения об организации</a><span id="arrow4" class="icon-arrow"></span>
+              <div id="wrapper4" class="navContainer__list-wrapper">
+                <ul id="content4" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <a href="" class="navContainer__accessibility">Для слабовидящих</a>
+        </div>
+   </nav>
+    <div class="line"></div>
+    <main>
+        <div class="hero">
+          <div class="breadcrumb">
+            <a href="" class="breadcrumb__link" >Главная</a>
+            <p class="breadcrumb__slash">/</p>
+            <a href="" class="breadcrumb__link" >Специальности</a>
+            <p class="breadcrumb__slash">/</p>
+            <p class="breadcrumb__page">Специальность “Туризм и гостеприимство”</p>
+        </div>
+          <div class="container hero__container">
+            <div class="hero__text">
+              <h2 class="heading hero__heading">Специальность<br><span class="pink">“Туризм и гостеприимство”</span></h2>
+              <p>Приглашаем вас пройти обучение на специальности «Туризм и гостеприимство»! </p>
+              <p>В 2023 году на эту специальность ведётся набор на бюджетные места!</p>
+              <p>По окончанию обучения на данной специальности выпускники получают диплом государственного образца!</p>
+              <a href="" class="pinkBtn">Хочу тут учиться!</a>
+            </div>
+           
+            <div class="hero__images">
+              <img src="./img/diploma.svg" alt="">
+            </div>
+            
+          </div>
+        </div>
+        <div class="about container">
+          <h2 class="headerThree about__heading">О профессии</h2>
+          <div class="about__text">
+            <p><span>Туризм</span> — одна из самых динамично развивающихся сфер, которая пронизывает практически все социально-экономические уровни, ведь это не только гостиницы, отели, развлекательные и горнолыжные комплексы, пляжи, бассейны, это еще и все виды транспорта (от велосипедов и лошадей до пассажирских лайнеров), это объекты культуры и истории, объекты общественного питания (кафе, бары, рестораны) и многое другое. Именно поэтому туризм по денежным оборотам превосходит даже нефтяной бизнес.</p>
+            <p><span>Сфера туризма </span> – это работа мечты, которая вызывает яркие ассоциации с морем, теплом, отдыхом, радостью, развлечениями, однако такие ассоциации больше подходят туристам, для работников туристической сферы их работа – это путешествия, богатый кругозор, внушительный багаж знаний о странах, городах, видах отдыха, отелях и многом другом, постоянное общение, интересные встречи, но при этом важно обладать целым рядом качеств, которые превращают работу в туризме в любимое хобби.</p>
+          </div>
+          <div class="about__container">
+            <div class="about__card">
+              <p class="about__card-title">Необходимые личностные качества:<span class="icon-study"></span></p>
+              <div class="about__card-list">
+                <ul>
+                  <li>Любознательность, безграничное желание узнавать новое и актуальное в сфере туризма;</li>
+                  <li>Активная жизненная позиция;</li>
+                  <li>Гибкость, умение быстро подстраиваться под изменяющиеся обстоятельства;</li>
+                  <li>Стрессоустойчивость;</li>
+                  <li>Ответственность;</li>
+                  <li>Коммуникабельность, умение найти подход к клиенту;</li>
+                  <li>Вежливость, доброжелательность.</li>
+                </ul>
+              </div>
+              <p class="about__card-discription">Если все это (или большая часть) про вас, мы будем рады видеть вас в числе абитуриентов Бизнес-Колледжа ИРБиС, где вы приобретёте все необходимые знания и навыки для успешного старта вашей карьеры.</p>
+            </div>
+            <div class="about__card">
+              <p class="about__card-title">Основные знания и навыки специалиста по туризму:<span class="icon-study"></span></p>
+              <div class="about__card-list">
+                <ul>
+                  <li>Знание географии, географии туризма;</li>
+                  <li>Знание основных видов туризма и их специфики;</li>
+                  <li>Знание ведущих, брендовых туристических продуктов (отельный, ресторанный бизнес и т.д.)</li>
+                  <li>Знание истории;</li>
+                  <li>Знание иностранных языков;</li>
+                  <li>Маркетинг в туризме;</li>
+                  <li>Основы права в туризме;.</li>
+                  <li>Знание международной этики и этикета;</li>
+                  <li>Знания и навыки делового общения;</li>
+                  <li>Навыки организационной и управленческой деятельности</li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="teachers container">
+          <h2 class="headerThree teachers__heading">Преподаватели</h2>
+          <div class="teachers__discription">
+            <p>Обучение по программе проводят высококвалифицированные преподаватели, в том числе преподаватели-практики с внушительным опытом работы в сфере туризма, сервиса, гостиничного бизнеса.</p>
+            <div class="teachers__discription-container">
+              <img src="./img/Vector 3.svg" alt="arrow">
+              <p>Коллектив лучших преподавателей,<br> преподавателей-практиков</p>
+              <div class="question__swipperBtn swipperArrowBtn">
+                <a href="#" class="question__swipperBtn-leftBtn swipperArrowBtn-left"><span class="icon-arrow"></span></a>
+                <a href="#" class="question__swipperBtn-rightBtn swipperArrowBtn-right"><span class="icon-arrow"></span></a>
+            </div>  
+            </div>
+          </div>
+          <div class="teachers__swipper swiper">
+            <div class="swiper-wrapper ">
+              <div class="teachers__card swiper-slide">
+                <img src="./img/teacher1.jpg" alt="">
+                <p class="teachers__card-title">Дмитрий Анпилогов</p>
+                <p class="teachers__card-discription">Директор туристической компании «Лагуна тур». Преподаватель предмета «Введение в туризм» </p>
+              </div>
+              <div class="teachers__card swiper-slide">
+                <img src="./img/teacher2.jpg" alt="">
+                <p class="teachers__card-title">Галина Борисовна Бессонова</p>
+                <p class="teachers__card-discription">К.и.н., доцент, преподаватель ИРБиС</p>
+              </div>
+              <div class="teachers__card swiper-slide">
+                <img src="./img/teacher3.jpg" alt="">
+                <p class="teachers__card-title">Дмитрий Анпилогов</p>
+                <p class="teachers__card-discription">Директор туристической компании «Лагуна тур». Преподаватель предмета «Введение в туризм» </p>
+              </div>
+              <div class="teachers__card swiper-slide">
+                <img src="./img/teacher1.jpg" alt="">
+                <p class="teachers__card-title">Елена Логинова</p>
+                <p class="teachers__card-discription">Руководитель направления MICE сети отелей «Богемия»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why container">
+          <h2 class="headerThree why__heading">Почему Бизнес-Колледж ИРБиС?</h2>
+          <div class="why__text">
+            <p>Так преподавание предмета «Введение в туризм» осуществляет Дмитрий Анпилогов – директор туристической компании «Лагуна тур». Более того, в «Лагуне» студенты ИРБиС проходят практику, получая первые представления о работе туристического агентства.</p>
+            <p>Дмитрий Викторович говорит о своей дисциплине: «В ИРБиС я преподаю интересную, важную и очень сложную специальность «Введение туризм». Сложность в том, что это азы, и именно с моей специальности начинается путь студентов в туризме. Здесь важно не навредить и дать правильный заряд, заинтересовать, увлечь и вдохновить. В процессе обучения мне нравится, что студенты колледжа младше по возрасту студентов вуза, поэтому они все очень живо, активно воспринимают. Например, для студентов вуза, которые проходят практику в «Лагуна тур», важна печать о прохождении этой практики, студенты колледжа во всем участвуют, работают и очень стараются».</p>
+            <p>Также занятия проводят кандидат исторических наук, доцент Галина Борисовна Бессонова, кандидат социологических наук, доцент Светлана Николаевна Макарова, директор туристического агентства «Галеон» Светлана Владимировна Шутикова.</p>
+          </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerContainer__header">
+                <div class="footerContainer__header-logo">
+                    <img src="./img/LOGO_footer.png" alt="LOGO">
+                    <p>Институт Развития<br>Бизнеса и Стратегий</p>
+                </div>
+                <div class="footerContainer__header-adress">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footerContainer__header-contacts">
+                    <div class="footerContainer__header-social">
+                        <a href="" ><span class="icon-VK"></span></a>
+                        <a href="" ><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footerContainer__header-phone">
+                        <a href="tel:+78452401711" class="footerContainer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com" class="footerContainer__header-email">irbis.edu.saratov@gmail.com</a>   
+                    </div>
+                </div>
+                <div class="footerContainer__middle footerContainer__middle-mobile">
+                    <div class="footerContainer__middle-links footerContainer__middle-links--mobile">
+                        <a href="#">Студенческая жизнь</a>
+                        <a href="#">Образовательные треки</a>
+                        <a href="#">Анонсы мероприятий</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContainer__middle">
+                <div class="footerContainer__middle-links">
+                    <a href="#">Студенческая жизнь</a>
+                    <a href="#">Образовательные треки</a>
+                    <a href="#">Анонсы мероприятий</a>
+                </div>
+                <div class="footerContainer__middle-privicy">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footerContainer__header-adress footerContainer__header-adress--mobile">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footerContainer__header-contacts footerContainer__header-contacts--mobile">
+                    <div class="footerContainer__header-social">
+                        <a href="" ><span class="icon-VK"></span></a>
+                        <a href="" ><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footerContainer__header-phone">
+                        <a href="tel:+78452401711" class="footerContainer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com" class="footerContainer__header-email">irbis.edu.saratov@gmail.com</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="footerContainer__bottom">
+                <div class="footerContainer__bottom-copyright">
+                    <p>2023 © Институт Развития Бизнеса и Стратегий. Все права защищены</p>
+                </div>
+                <div class="footerContainer__middle-privicy footerContainer__middle-privicy--mobile">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <a href=""  class="footerContainer__bottom-develop">
+                    Разработка сайта
+                    <img src="./img/SpaceApp.svg" alt="SpaceApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./plugins/Accordion.JS/accordion.js"></script>
+    <script src="./js/script.js?v=0.001"></script>
+    <!-- <script>
+      var swiper = new Swiper(".teachers__swipper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script> -->
+</body>
+</html>

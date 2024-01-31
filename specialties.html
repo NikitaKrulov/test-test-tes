@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/LOGO.png" type="image/x-icon">
+        <link rel="stylesheet" href="./fonts/icomoon-v1.0/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./plugins/Accordion.JS/accordion.css">
+        <link rel="stylesheet" href="./css/style-specialties.css?v=0.001">  
+        <title>ИРБИС</title>
+    </head>
+<body>
+    <header class="header">
+        <div class="headerContainer">
+            <div class="headerContainer__logo">
+                <div class="headerContainer__logo-wrapper" href="">
+                    <a href="/index.html">
+                        <div class="headerContainer__logo-img">
+                            <img src="./img/LOGO.png" alt="ИРБИС">
+                        </div>
+                        <p class="headerContainer__logo-text">Институт Развития<br> Бизнеса и Стратегий</p>
+                    </a>
+                    <div class="burger__button">
+                        <div class="burger__menu-icon">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="burger__menu">
+                        <ul class="burger__menu-list" id="burger-dropdown">
+                            <div class="container">
+                                <form class="burger__menu-search">
+                                    <div class="input__conatiner">
+                                        <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
+                                    </div>
+                                </form>
+                                <li class="burger__menu-item"><a href="#">Главная</a></li>
+                                <li class="burger__menu-item"><a href="#">Новости</a></li>
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Колледж</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="burger__menu-item" ><a href="#">Специальности</a></li>              
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Жизнь наших студентов</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Школа бизнеса</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  
+                                  <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Сведения об организации</a>
+                                    <ul class="burger__menu-dropContent">
+                                      <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                      <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="burger__menu-item burger__menu-btn"><a class="burger__menu-button pinkBtn"href="">Хочу на бюджет!</a></li>
+                                  <li class="burger__menu-item"><a href="" class="navContainer__accessibility navContainer__accessibility-burger">Для слабовидящих</a></li>
+                                  <li class="burger__menu-item burger__menu-info">
+                                    <a href="tel:+78452401711" class="burger__menu-tel">8 (8452) 40-17-11</a>
+                                    <a href="mailto:irbis.edu.saratov@gmail.com" class="burger__menu-email ">irbis.edu.saratov@gmail.com</a>
+                                  </li>
+                                  <li class="burger__menu-item burger__menu-social">
+                                    <a href=""><span class="icon-VK"></span></a>
+                                    <a href=""><span class="icon-Telegram"></span></a>
+                                  </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form class="headerContainer__search">
+                <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
+            </form>
+            <div class="headerContainer__contacts">
+                <a class="pinkBtn"href="">Хочу на бюджет!</a>
+                <div class="headerContainer__contacts-social">
+                    <a href=""><span class="icon-VK"></span></a>
+                    <a href=""><span class="icon-Telegram"></span></a>
+                </div>
+                <div class="headerContainer__contacts-info">
+                    <a href="tel:+78452401711" class="headerContainer__contacts-tel">8 (8452) 40-17-11</a>
+                    <a href="mailto:irbis.edu.saratov@gmail.com" class="headerContainer__contacts-email">irbis.edu.saratov@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="line"></div>
+    <nav class="nav">
+        <div class="navContainer">
+          <ul class="navContainer__list">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Новости</a></li>
+            <li id="dropdown1" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Колледж</a><span id="arrow1" class="icon-arrow"></span>
+              <div id="wrapper1" class="navContainer__list-wrapper">
+                <ul id="content1" class="navContainer__list-dropdownContent">
+                  <li><a href="#">О колледже</a></li>
+                  <li><a href="#">Абитуриенту</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Специальности</a></li>
+            <li id="dropdown2" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Жизнь наших студентов</a><span id="arrow2" class="icon-arrow"></span>
+              <div id="wrapper2" class="navContainer__list-wrapper">
+                <ul id="content2" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li id="dropdown3" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Школа бизнеса</a><span id="arrow3" class="icon-arrow"></span>
+              <div id="wrapper3" class="navContainer__list-wrapper">
+                <ul id="content3" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li id="dropdown4" class="navContainer__list-dropdown">
+              <a href="#" class="navContainer__list-button">Сведения об организации</a><span id="arrow4" class="icon-arrow"></span>
+              <div id="wrapper4" class="navContainer__list-wrapper">
+                <ul id="content4" class="navContainer__list-dropdownContent">
+                  <li><a href="#">Ссылка 1</a></li>
+                  <li><a href="#">Ссылка 2</a></li>
+                  <li><a href="#">Ссылка 3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <a href="" class="navContainer__accessibility">Для слабовидящих</a>
+        </div>
+   </nav>
+    <div class="line"></div>
+    <main>
+        <div class="breadcrumb">
+            <a href="" class="breadcrumb__link" >Главная</a>
+            <p class="breadcrumb__slash">/</p>
+            <p class="breadcrumb__page">Специальности колледжа ИРБиС</p>
+        </div>
+        <div class="container">
+            <h2 class="heading">Специальности колледжа ИРБиС</h2>
+                <div class="specialties__college">
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Декоративно – прикладное искусство и народные промыслы</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Экономика и бухгалтерский учёт</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Туризм</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Право и организация социального обеспечения</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Банковское дело</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Коммерция</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Информационные системы и программирование</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Сестринское дело</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-wantBudgetBtn pinkBtn"><span>Хочу на бюджет!</span></a>
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardCollege">
+                        <div class="cardCollege__content">
+                            <p class="cardCollege__content-subTitle">Специальности колледжа ИРБиС</p>
+                            <p class="cardCollege__content-title">Наши будущие специальности</p>
+                            <div class="cardCollege__content-action">
+                                <a href="" class="cardCollege__content-detailBtn"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerContainer__header">
+                <div class="footerContainer__header-logo">
+                    <img src="./img/LOGO_footer.png" alt="LOGO">
+                    <p>Институт Развития<br>Бизнеса и Стратегий</p>
+                </div>
+                <div class="footerContainer__header-adress">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footerContainer__header-contacts">
+                    <div class="footerContainer__header-social">
+                        <a href="" ><span class="icon-VK"></span></a>
+                        <a href="" ><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footerContainer__header-phone">
+                        <a href="tel:+78452401711" class="footerContainer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com" class="footerContainer__header-email">irbis.edu.saratov@gmail.com</a>   
+                    </div>
+                </div>
+                <div class="footerContainer__middle footerContainer__middle-mobile">
+                    <div class="footerContainer__middle-links footerContainer__middle-links--mobile">
+                        <a href="#">Студенческая жизнь</a>
+                        <a href="#">Образовательные треки</a>
+                        <a href="#">Анонсы мероприятий</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContainer__middle">
+                <div class="footerContainer__middle-links">
+                    <a href="#">Студенческая жизнь</a>
+                    <a href="#">Образовательные треки</a>
+                    <a href="#">Анонсы мероприятий</a>
+                </div>
+                <div class="footerContainer__middle-privicy">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footerContainer__header-adress footerContainer__header-adress--mobile">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footerContainer__header-contacts footerContainer__header-contacts--mobile">
+                    <div class="footerContainer__header-social">
+                        <a href="" ><span class="icon-VK"></span></a>
+                        <a href="" ><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footerContainer__header-phone">
+                        <a href="tel:+78452401711" class="footerContainer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com" class="footerContainer__header-email">irbis.edu.saratov@gmail.com</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="footerContainer__bottom">
+                <div class="footerContainer__bottom-copyright">
+                    <p>2023 © Институт Развития Бизнеса и Стратегий. Все права защищены</p>
+                </div>
+                <div class="footerContainer__middle-privicy footerContainer__middle-privicy--mobile">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <a href=""  class="footerContainer__bottom-develop">
+                    Разработка сайта
+                    <img src="./img/SpaceApp.svg" alt="SpaceApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./plugins/Accordion.JS/accordion.js"></script>
+    <script src="./js/script.js?v=0.001"></script>
+</body>
+</html>

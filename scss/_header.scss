@@ -91,6 +91,7 @@ a{
   overflow: hidden;
   color: #A3ACC5;
   font-weight: 700;
+  transition: all .38s ease-in-out;
   &:hover{
       color: #FFF
   }
@@ -342,7 +343,7 @@ a{
     line-height: 125%;
     &-wrapper{
       padding-top: 19px;
-      @include fluid(padding-top, 10px, 19px);
+      @include fluid(padding-top, 26px, 44px);
       position: absolute;
       right: -50px;
     }
@@ -356,7 +357,7 @@ a{
         background-color: #FFF;
         box-shadow: 20px 20px 0px 0px #E2E7F4;
         z-index: 3;
-        border-radius: 10px;
+        border-radius: 20px;
         @include fluid(padding, 15px, 30px);
         min-width: 100%;
         li{
@@ -442,6 +443,9 @@ a{
   transform: translateX(-100%);
   &-item{
     padding: 20px 0;
+    &:last-child{
+      padding-bottom: 0;
+    }
   }
   &-icon {
     width: 30px;
@@ -498,7 +502,7 @@ a{
     // }
   }
   &-list{
-    padding: 20px;
+    padding: 15px;
     background-color: #ffffff;
     border-radius: 10px;
     transition: all 0.38s ease-in-out;
@@ -506,7 +510,10 @@ a{
     flex-direction: column;
     width: 100%;
     position: absolute;
-    padding-top: 70px;
+    padding-top: 47px;
+    .container{
+      padding: 0;
+    }
     &.open{
       display: none;
       flex-direction: column;
@@ -529,7 +536,7 @@ a{
     }
   }
   &-dropContent{
-    padding: 10px 0;
+    padding:  0;
     display: none;
     &.show{
       display: flex;
@@ -550,7 +557,7 @@ a{
   }
   &-button{
       font-size: 12px;
-      padding: 24px 0;
+      padding: 18px 0;
   }
   &-info{
     display: flex;
@@ -596,7 +603,15 @@ a{
     font-size: 14px;
   }
 }
-
+.burger__menu-dropContent .burger__menu-item{
+  padding: 12.5px 30px ;
+  &:last-child{
+    padding-bottom:0;
+  }
+  &:first-child{
+    padding-top: 25px;
+  }
+}
 .burger__menu-list .burger__menu-action.active::after {
   color: #FF2574;
   transform: rotate(-180deg);
@@ -718,22 +733,8 @@ a{
   display: none;
 }
 #dropdown2{min-width: 185px;}#dropdown3{min-width: 122px;}#dropdown4{min-width: 198px;}
-.navContainer__list{
-  align-items: baseline;
-}
-.navContainer__list-dropdown--active {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  gap: 5px;
-  align-items: baseline;
-  flex-wrap:wrap;
-  flex: 50%;
-  span {
-    width: 10px;
-    height: 10px;
-  }
-}
+
+
 .navContainer__list-dropdownContent--active{
   display: block;
 }
@@ -854,6 +855,7 @@ a{
   .navContainer{
     @include container;
     max-width: 768px;
+    height: 250px;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -864,15 +866,23 @@ a{
     -ms-overflow-style: none; 
     scrollbar-width: none; 
     &__list{
-
       padding: 0;
+      &-dropdown{
+        flex-wrap: nowrap;
+      }
+
       &-wrapper{
         padding: 0;
-        margin-top: 10px;
-        right: 0;
+        margin-top: 40px;
+        top: 0;
+        position: relative;
       }
       &-dropdownContent{
+        margin-top: 30px;
         padding: 20px;
+        left: 0;
+        top: 0;
+        position: absolute;
         box-shadow: none;
         li{
           padding-bottom: 20px;
@@ -919,6 +929,9 @@ a{
   }
   .titleIcon{
     font-size: 30px;
+  }
+  .grayBtn{
+    line-height: 70%;
   }
 }
 @media screen and (max-width:592px) {

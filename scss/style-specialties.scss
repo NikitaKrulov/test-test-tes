@@ -1,0 +1,206 @@
+@import "./mixins";
+@import "./header";
+@import "./footer";
+
+.specialties__college{
+      @include fluid(padding-top, 30px , 60px);@include fluid(padding-bottom, 100px , 191px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include fluid(gap, 10px , 15px);
+  }
+  .cardCollege{
+    box-shadow: 20px 20px 0px 0px #E2E7F4;
+    border-radius: 20px;
+    border: 1px solid #E2E7F4;
+    background:  #F6F8FD;
+    flex-basis: 32.5%;
+    position: relative;
+    overflow: hidden;
+    &__content{
+      @include fluid(padding, 25px , 30px);
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      &-subTitle{
+        color: #A3ACC5;
+        @include fluid(font-size, 12px , 14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 125%; /* 17.5px */
+        z-index: 2;
+        transition: all .38s ease-in-out; 
+      }
+      &-title{
+        color:#2D3038;
+        @include fluid(font-size, 18px , 24px);
+        @include fluid(margin-top, 10px , 20px);@include fluid(margin-bottom, 10px , 20px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 30px */
+        z-index: 2;
+        transition: all .38s ease-in-out; 
+      }
+      &-action{
+        display: flex;
+        align-items: center;
+        @include fluid(gap, 7px , 15px);
+        margin-top: auto;
+      }
+      &-wantBudgetBtn{
+        position: relative;
+        @include fluid(padding-top, 12px , 18px);@include fluid(padding-bottom, 12px , 18px);
+        @include fluid(padding-right, 12px , 24px);@include fluid(padding-left, 12px , 24px);
+        color:#FF2574;
+        @include fluid(font-size, 14px , 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; /* 20px */
+        border: #FF2574 1px solid;
+        border-radius: 10px;
+        white-space: nowrap;
+        background-color: #F6F8FD;
+        span{
+          position: relative;
+          z-index: 3;
+          transition: all .38s ease-in-out; 
+        }
+        &:hover{
+          color: #FFF;
+          span{
+           color: #3E465C;
+          }
+        }
+      }
+      &-detailBtn{
+        @include fluid(padding-top, 12px , 18px);@include fluid(padding-bottom, 12px , 18px);
+        @include fluid(padding-right, 12px , 24px);@include fluid(padding-left, 12px , 24px);
+        @include fluid(font-size, 14px , 16px);
+        border: #A3ACC5 1px solid;
+        line-height: 100%; /* 20px */
+        border-radius: 10px;
+        color: #A3ACC5;
+        white-space: nowrap;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+        span{
+          position: relative;
+          z-index: 3;
+          transition: all .38s ease-in-out; 
+        }
+        &:hover{
+          color: #FF2574;
+          span{
+            color: #FF2574;
+          }
+        }
+      }
+    }
+    &:hover{
+      .cardCollege__content-subTitle,.cardCollege__content-title{
+        color: #FFF;
+      }
+      
+      .cardCollege__content-action .cardCollege__content-detailBtn{
+        color: #FFF;
+        border: #FFF 1px solid;
+      }
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    // :hover
+    .cardCollege{
+    &:hover{
+        .cardCollege__content-subTitle{
+        color: #A3ACC5;
+        }
+        .cardCollege__content-title {
+        color: #2D3038;
+        }
+        .cardCollege__content-action .cardCollege__content-detailBtn{
+        color: #A3ACC5;
+        border: #A3ACC5 solid 1px;
+        &::before{
+        display: none;
+        }
+        }
+    }
+    &::before{
+        display: none;
+    }
+    }
+    .reviewsContainer__action a:hover{ 
+    color: #A3ACC5;&::before{display: none;}
+    } 
+    .cardCollege__content-wantBudgetBtn::before{
+    display: none;
+    }
+    .cardCollege__content-wantBudgetBtn:hover span{
+    color: #FF2574;
+    }
+    .cardCollege__content-detailBtn:hover span{
+    color: #A3ACC5;
+    }
+
+    .cardCollege{
+        flex-basis: 49%;
+        box-shadow: 10px 10px 0px 0px #E2E7F4;
+        &:last-child{
+          flex-basis: 100%;
+        }
+      }
+      .specialties__college{
+        justify-content: start;
+      }
+
+}
+@media screen and (max-width: 768px){
+    .cardCollege{
+        flex-basis: 100%;
+        box-shadow: none;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .specialties__college{
+          gap: 15px;
+          padding-bottom: 50px;
+        }
+      .cardCollege{
+        box-shadow: none;
+        &__content{
+          padding: 15px;
+          &-title{
+            font-size: 16px;
+            margin: 20px 0;
+          }
+          &-wantBudgetBtn{
+            font-size: 12px;
+          }
+          &-detailBtn{
+            font-size: 12px;
+          }
+        }
+    
+      }
+      .cardCollege {
+        flex-basis: 100%;
+      }
+      .specialties__college-container{
+        justify-content: center;
+      }
+}
+@media screen and (max-width: 400px){
+    .breadcrumb{
+        flex-wrap: wrap;
+        &__page{
+            width: 100%;
+        }
+    }
+}

@@ -1,3 +1,45 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var swiperWrapper = document.querySelector('.teachers__swipper .swiper-wrapper');
+  var swiperContainer = document.querySelector('.teachers__swipper');
+  var swiperButtonNext = document.querySelector('.swipperArrowBtn-right'); 
+  var swiperButtonPrev = document.querySelector('.swipperArrowBtn-left');  
+
+  var swiperOptions = {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    loop: false, 
+    breakpoints: {
+      993: {
+        slidesPerView: 3,
+        slidesPerGroup: 1, 
+      },
+      580: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+      },
+      0: {
+        slidesPerView: 1, 
+        slidesPerGroup: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swipperArrowBtn-right',  
+      prevEl: '.swipperArrowBtn-left',   
+    },
+  };
+
+  var swiper = new Swiper(swiperContainer, swiperOptions); 
+
+  if (swiperWrapper.children.length <= 3) {
+    swiperButtonNext.style.display = 'none'; 
+    swiperButtonPrev.style.display = 'none'; 
+    swiperContainer.style.pointerEvents = 'none'; 
+  }
+});
+
+
+
 var swiper = new Swiper(".swiperImg__pegination", {
   loop: true,
   spaceBetween: 10,
@@ -27,24 +69,29 @@ var SwiperNewsPage = new Swiper('.swiper-container', {
   },
 });
 
-$('.news__action-btn').on('click', function() {
-  for (var i = 0; i < 3; i++) {
-    const newsCard__two = `
-      <a href="#" class="newsCard">
-        <div class="newsCard__img">
-          <img src="./img/CardBG1.png" alt="CardBG">
-        </div>
-        <div class="newsCard__title">
-          <p class="newsCard__title-date">12 ноября 2023</p>
-          <p class="newsCard__title-head">Поздравляем! Новое свидетельство от РосПатента!</p>
-          <p class="newsCard__title-text">Научный коллектив ИРБиС, состоящий из студентов и преподавателей, разработал интересный сервис, позволяющий при помощи программы быстро и качественно определять подлинность денежной банкноты.</p>
-          <p class="newsCard__footer">Читать далее<span class="icon-arrow"></span></p>
-        </div>
-      </a>`;
+$(document).ready(function() {
+  const newsBlock = $('.news__two');
+  const newsCards = newsBlock.find('.newsCard');
+  const showMoreBtn = newsBlock.find('.news__action-btn');
 
-    $('.news__two .news__content').append(newsCard__two);
+  if (newsCards.length > 6) {
+      showMoreBtn.show();
+      newsCards.slice(6).hide();
+
+      showMoreBtn.on('click', function() {
+          let hidden = newsCards.filter(':hidden');
+          if (hidden.length > 0) {
+              hidden.slice(0).slideDown();
+              showMoreBtn.html('Скрыть');
+          } else {
+              newsCards.slice(6).slideUp();
+              showMoreBtn.html('Показать еще');
+          }
+      });
   }
 });
+
+
 
 
 $(document).ready(function () {
@@ -143,6 +190,7 @@ $(document).ready(function () {
     }
   });
 });
+
 const videoContainersNews = document.querySelectorAll('.questionSwiper__slide-video');
 
 videoContainersNews.forEach(videoContainer => {
@@ -365,8 +413,6 @@ function updateImage(slideIndex) {
     }
   
     function toggleDropdown(index) {
-      closeAllDropdowns();
-  
       const dropdown = dropdowns[index];
       const wrapper = wrappers[index];
       const content = dropdownContents[index];
@@ -374,9 +420,13 @@ function updateImage(slideIndex) {
       if (dropdown && wrapper && content) {
         const isActive = dropdown.classList.contains('navContainer__list-dropdown--active');
   
-        dropdown.classList.toggle('navContainer__list-dropdown--active', !isActive);
-        wrapper.classList.toggle('navContainer__list-wrapper--active', !isActive);
-        content.classList.toggle('navContainer__list-dropdownContent--active', !isActive);
+        closeAllDropdowns();
+  
+        if (!isActive) {
+          dropdown.classList.add('navContainer__list-dropdown--active');
+          wrapper.classList.add('navContainer__list-wrapper--active');
+          content.classList.add('navContainer__list-dropdownContent--active');
+        }
       }
     }
   
@@ -394,7 +444,6 @@ function updateImage(slideIndex) {
       }
     });
   });
-  
   
   
   

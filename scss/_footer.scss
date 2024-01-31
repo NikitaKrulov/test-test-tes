@@ -105,6 +105,7 @@
     @include fluid(gap, 30px, 60px);
     a{
         color: #FFF;
+        font-weight: 700;
     }
     }
     &-privicy a{
@@ -143,6 +144,8 @@
 }
 &__middle-mobile{
     display: none;
+    color: #FFF;
+    font-weight: 700;
 }
 
 }
