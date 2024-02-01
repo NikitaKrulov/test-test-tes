@@ -397,6 +397,7 @@ a{
     a{
       display: flex;
       align-items: center;
+      justify-content: center;
     } 
   }
   &__accessibility{
@@ -689,50 +690,13 @@ a{
     position: relative;
     height: 40px;
   }
-  .navContainer{
-  @include container;
-  max-width: 95%;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  z-index: 5;
-  overflow-y: scroll;
-  overflow-x: visible;
-  align-items: baseline !important;
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-  &__list{
-    &-wrapper{
-      padding: 0;
-      margin-top: 10px;
-    }
-    &-dropdownContent{
-      padding: 20px;
-      box-shadow: none;
-      li{
-        padding-bottom: 20px;
-      }
-    }
-    a{
-      justify-content: center;
-      transition: all 0.38s ease-in-out;
-    }
-  }
-  &__accessibility{
-    white-space: nowrap;
-    margin-left: 20px;
-    &-burger{
-      margin-left: 0;
-    }
-  }
-}
+
 .navContainer::-webkit-scrollbar {
   display: none; 
 }
 .navContainer__list-wrapper {
   display: none;
 }
-#dropdown2{min-width: 185px;}#dropdown3{min-width: 122px;}#dropdown4{min-width: 198px;}
 
 
 .navContainer__list-dropdownContent--active{
@@ -750,7 +714,46 @@ a{
 .burger__menu-list.open{
   display: none;
 }
+.navContainer{
+  @include container;
+  max-width: 97%;
+  margin: 12px 0;
+  padding: 0;
+  position: absolute;
+  z-index: 5;
+  overflow-y: visible;
+  overflow-x: scroll;
+  align-items: start !important;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  &--active{
+    height: 100vh;
+  }
+  &__list{
+    padding: 0;
+    &-dropdown{
+      flex-wrap: nowrap;
+    }
 
+    &-wrapper{
+      padding: 0;
+      margin-top: 40px;
+      top: 0;
+      position: relative;
+    }
+    &-dropdownContent{
+      margin-top: 30px;
+      padding: 20px;
+      left: 0;
+      top: 0;
+      position: absolute;
+      box-shadow: none;
+      li{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
 }
 @media screen and (max-width: 992px) {
   .swipperArrowBtn a:hover{
@@ -855,7 +858,7 @@ a{
   .navContainer{
     @include container;
     max-width: 768px;
-    height: 250px;
+    
     margin: 0;
     padding: 0;
     position: absolute;
@@ -865,6 +868,9 @@ a{
     align-items: start;
     -ms-overflow-style: none; 
     scrollbar-width: none; 
+    &--active{
+      height: 100vh;
+    }
     &__list{
       padding: 0;
       &-dropdown{
@@ -912,6 +918,12 @@ a{
   .burger__menu-list.open{
     display: flex;
   }
+  .navContainer__accessibility,.navContainer__accessibility-burger{
+    font-weight: 500 !important;
+  }
+  .navContainer__accessibility-burger::before{
+    font-weight: 600 !important;
+  }
 }
 @media screen and (max-width: 790px) {
   .navContainer{
@@ -919,11 +931,13 @@ a{
   }
 }
 @media screen and (max-width: 768px) {
+
   .navContainer{
    @include container;
    margin: 0;
    padding: 0;
   }
+  
   .heading {
     font-size: 38px;
   }
@@ -933,6 +947,7 @@ a{
   .grayBtn{
     line-height: 70%;
   }
+
 }
 @media screen and (max-width:592px) {
   .navContainer{
