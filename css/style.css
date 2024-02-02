@@ -3193,6 +3193,10 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-right: 0;
   padding-top: 20px;
   padding-bottom: 40px;
@@ -3234,52 +3238,50 @@ a {
     padding-bottom: 60px;
   }
 }
-.news__swipper-allNews {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-}
-@media (min-width: 992px) {
-  .news__swipper-allNews {
-    padding-top: calc(0.0107758621 * 100vw + 19.3103448276px);
-  }
-}
-@media (min-width: 1920px) {
-  .news__swipper-allNews {
-    padding-top: 40px;
-  }
-}
-@media (min-width: 992px) {
-  .news__swipper-allNews {
-    padding-bottom: calc(0.0323275862 * 100vw + -22.0689655172px);
-  }
-}
-@media (min-width: 1920px) {
-  .news__swipper-allNews {
-    padding-bottom: 40px;
-  }
-}
-.news__swipper-allNews a {
+.news__swipper a {
+  margin-top: 30px;
+  margin-bottom: 10px;
   display: inline-block;
   color: #A3ACC5;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   border-radius: 10px;
-  transition: all 0.38s ease-in-out;
+  transition: color 0.38s ease-in-out;
 }
 @media (min-width: 992px) {
-  .news__swipper-allNews a {
+  .news__swipper a {
+    margin-top: calc(0.0107758621 * 100vw + 19.3103448276px);
+  }
+}
+@media (min-width: 1920px) {
+  .news__swipper a {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .news__swipper a {
+    margin-bottom: calc(0.0323275862 * 100vw + -22.0689655172px);
+  }
+}
+@media (min-width: 1920px) {
+  .news__swipper a {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .news__swipper a {
     font-size: calc(0.0021551724 * 100vw + 11.8620689655px);
   }
 }
 @media (min-width: 1920px) {
-  .news__swipper-allNews a {
+  .news__swipper a {
     font-size: 16px;
   }
 }
 
 .newsSwiper {
+  width: 100%;
   overflow: visible;
 }
 .newsSwiper__wrapper {
@@ -3405,7 +3407,7 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 125%; /* 20px */
-  transition: 0.38s all;
+  transition: 0.38s color ease-in-out;
   display: flex;
   align-items: baseline;
   justify-content: end;

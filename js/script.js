@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
           slidesPerView: 3.03,
           slidesPerGroup: 1,
         },
-        0: {
+        500: {
           slidesPerView: 2.03,
+          slidesPerGroup: 1,
+        },
+        0: {
+          slidesPerView: 1,
           slidesPerGroup: 1,
         },
       },
