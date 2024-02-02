@@ -1,156 +1,159 @@
 @import "./mixins";
 @import "./header";
 @import "./footer";
-body{font-variant-numeric: lining-nums proportional-nums;}
-
-.breadcrumb{
-    margin: 0 auto;
-    @include fluid(padding-bottom, 30px , 50px);@include fluid(padding-top, 30px , 50px);
+body {
+    font-variant-numeric: lining-nums proportional-nums;
 }
-.hero{
+
+.breadcrumb {
+    margin: 0 auto;
+    @include fluid(padding-bottom, 30px, 50px);
+    @include fluid(padding-top, 30px, 50px);
+}
+.hero {
     border-radius: 0px 0px 50px 50px;
-    border: 1px solid #E2E7F4;
-    background: radial-gradient(254.06% 84.7% at 84.69% 50%, #F6F8FD 0%, #EEF1FA 100%);
+    border: 1px solid #e2e7f4;
+    background: radial-gradient(254.06% 84.7% at 84.69% 50%, #f6f8fd 0%, #eef1fa 100%);
     overflow: hidden;
-    &__container{
+    &__container {
         display: flex;
         align-items: start;
         justify-content: space-between;
-        @include fluid(gap, 5px , 40px);
+        @include fluid(gap, 5px, 40px);
     }
-    &__heading{
-        @include fluid(margin-bottom,30px,60px);
+    &__heading {
+        @include fluid(margin-bottom, 30px, 60px);
     }
-    &__text{
+    &__text {
         width: 65%;
-        @include fluid(margin-bottom,30px,60px);
-        p{
-            color: #2D3038;
+        @include fluid(margin-bottom, 30px, 60px);
+        p {
+            color: #2d3038;
             font-family: Raleway;
-            @include fluid(font-size,18px,22px);
+            @include fluid(font-size, 18px, 22px);
             font-style: normal;
             font-weight: 500;
             line-height: 150%; /* 33px */
             margin-bottom: 20px;
-            &:last-of-type{
+            &:last-of-type {
                 margin-bottom: 20px;
             }
         }
-        a{
+        a {
             display: inline-flex;
         }
-
     }
-    &__action{
+    &__action {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        a{white-space: nowrap;}
-        &-text{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        p{
-            width: 50%;
-            transform: rotate(-5.21deg) translateX(60px) translateY(-10px);
-            color: #A3ACC5;
-            font-family: "euroscript pro";
-            @include fluid(font-size, 22px , 32px);
-            font-weight: 400;
-            line-height: 78.25%;
-            text-align: center;
-            margin: 0;
+        a {
+            white-space: nowrap;
         }
-        img{
-            width: 120px;
-            object-fit: contain;
-            transform: rotate(182deg) scale(1, -1);
-        }
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            p {
+                width: 50%;
+                transform: rotate(-5.21deg) translateX(60px) translateY(-10px);
+                color: #a3acc5;
+                font-family: "euroscript pro";
+                @include fluid(font-size, 22px, 32px);
+                font-weight: 400;
+                line-height: 78.25%;
+                text-align: center;
+                margin: 0;
+            }
+            img {
+                width: 120px;
+                object-fit: contain;
+                transform: rotate(182deg) scale(1, -1);
+            }
         }
     }
-    &__images{
+    &__images {
         width: 39%;
         position: relative;
-        img{
+        img {
             object-fit: cover;
             position: absolute;
             top: 0;
             z-index: 0;
-            @include fluid(width,530px,663px);    
+            @include fluid(width, 530px, 663px);
         }
     }
-    
-
 }
 
-.about{
-    @include fluid(margin-top,60px,80px);@include fluid(margin-bottom,80px,100px);
-    &__heading{
-        @include fluid(margin-bottom,30px,40px);
+.about {
+    @include fluid(margin-top, 60px, 80px);
+    @include fluid(margin-bottom, 80px, 100px);
+    &__heading {
+        @include fluid(margin-bottom, 30px, 40px);
     }
-    &__text{
-        @include fluid(margin-bottom,60px,80px);
-        p{
+    &__text {
+        @include fluid(margin-bottom, 60px, 80px);
+        p {
             color: #495677;
             font-family: Raleway;
-            @include fluid(font-size,14px,18px);
+            @include fluid(font-size, 14px, 18px);
             font-style: normal;
             font-weight: 500;
             line-height: 28px;
-            @include fluid(margin-bottom,10px,15px);
-            span{
+            @include fluid(margin-bottom, 10px, 15px);
+            span {
                 font-weight: 700;
             }
         }
     }
 
-    &__container{
+    &__container {
         display: flex;
         align-items: stretch;
         gap: 30px;
         height: 100%;
     }
-    &__card{
-        @include fluid(padding,20px,30px);
+    &__card {
+        @include fluid(padding, 20px, 30px);
         border-radius: 20px;
-        border: 1px solid #E2E7F4;
-        background: #F6F8FD;
+        border: 1px solid #e2e7f4;
+        background: #f6f8fd;
         flex: 1;
         width: 50%;
-        box-shadow: 20px 20px 0px 0px #E2E7F4;
-        &-title{
-            color:  #495677;
-            @include fluid(font-size,20px,30px);
+        box-shadow: 20px 20px 0px 0px #e2e7f4;
+        &-title {
+            color: #495677;
+            @include fluid(font-size, 20px, 30px);
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             display: flex;
             align-items: start;
             justify-content: left;
-            @include fluid(width,340px,472px);
-            @include fluid(margin-bottom,20px,40px);
-            span{
-                color: #FF2574;
+            @include fluid(width, 340px, 472px);
+            @include fluid(margin-bottom, 20px, 40px);
+            span {
+                color: #ff2574;
                 transform: translateY(-10px);
-                @include fluid(font-size,22px,32px);
+                @include fluid(font-size, 22px, 32px);
                 margin-left: 10px;
             }
         }
-        &-list{
+        &-list {
             color: #495677;
-            @include fluid(font-size,16px,18px);
+            @include fluid(font-size, 16px, 18px);
             font-style: normal;
             font-weight: 500;
             line-height: 26px; /* 144.444% */
-            @include fluid(margin-bottom,20px,40px);
-            li{
+            @include fluid(margin-bottom, 20px, 40px);
+            li {
                 height: 100%;
                 display: flex;
                 margin-bottom: 10px;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0;
                 }
-                &::before{
+                &::before {
                     content: "";
                     position: relative;
                     margin-right: 15px;
@@ -166,250 +169,257 @@ body{font-variant-numeric: lining-nums proportional-nums;}
                 }
             }
         }
-        &-discription{
-            color:#495677;
-            @include fluid(font-size,14px,16px);
+        &-discription {
+            color: #495677;
+            @include fluid(font-size, 14px, 16px);
             font-style: normal;
             font-weight: 600;
             line-height: 24px; /* 150% */
         }
     }
-
 }
-.teachers{
-    
-    &__heading{
-        @include fluid(margin-bottom,20px,30px);
+.teachers {
+    &__heading {
+        @include fluid(margin-bottom, 20px, 30px);
     }
-    &__discription{
+    &__discription {
         display: flex;
         align-items: center;
         justify-content: left;
         color: #495677;
-        @include fluid(font-size,14px,16px);
+        @include fluid(font-size, 14px, 16px);
         font-style: normal;
         font-weight: 500;
         line-height: 24px; /* 150% */
-        p{width: 60%;}
-        &-container{
-            color: #A3ACC5;
+        p {
+            width: 60%;
+        }
+        &-container {
+            color: #a3acc5;
             text-align: center;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: "Euroscript Pro";
-            @include fluid(font-size,18px,24px);
+            @include fluid(font-size, 18px, 24px);
             font-style: normal;
             font-weight: 400;
-            line-height: 81%; 
+            line-height: 81%;
             display: flex;
             align-items: center;
             justify-content: left;
             width: 40%;
-            p{transform: rotate(7.644deg);}
-            img{ @include fluid(width,80px,120px);transform: rotate(158deg) scale(-1, 1);}
+            p {
+                transform: rotate(7.644deg);
+            }
+            img {
+                @include fluid(width, 80px, 120px);
+                transform: rotate(158deg) scale(-1, 1);
+            }
         }
     }
-    &__swipper{
+    &__swipper {
         overflow: hidden;
         padding: 20px 0;
-        @include fluid(margin-top,20px,40px);@include fluid(margin-bottom,40px,60px);
+        @include fluid(margin-top, 20px, 40px);
+        @include fluid(margin-bottom, 40px, 60px);
     }
-    &__card{
+    &__card {
         border-radius: 20px;
-        border: 1px solid #E2E7F4;
-        background: #FFF;
-        box-shadow: 20px 20px 0px 0px #E2E7F4;
+        border: 1px solid #e2e7f4;
+        background: #fff;
+        box-shadow: 20px 20px 0px 0px #e2e7f4;
         height: auto;
-        img{
+        img {
             object-fit: cover;
             border-radius: 20px;
             width: 100%;
-            @include fluid(height, 305px , 413px);
+            @include fluid(height, 305px, 413px);
         }
-        &-title{
+        &-title {
             margin-top: 23px;
             margin-bottom: 27px;
-            color:#495677;
-            @include fluid(font-size,18px,22px);
+            color: #495677;
+            @include fluid(font-size, 18px, 22px);
             font-style: normal;
             font-weight: 600;
-            line-height: 24px; 
+            line-height: 24px;
             padding-left: 20px;
-            padding-right: 20px
+            padding-right: 20px;
         }
-        &-discription{
-            color:#495677;
-            @include fluid(font-size,14px,16px);
+        &-discription {
+            color: #495677;
+            @include fluid(font-size, 14px, 16px);
             font-style: normal;
             font-weight: 500;
             line-height: 24px;
-            @include fluid(padding-bottom,20px,40px);
+            @include fluid(padding-bottom, 20px, 40px);
             padding-left: 20px;
-            padding-right: 20px
+            padding-right: 20px;
         }
     }
 }
-    
 
-.why{
-    &__heading{
-        @include fluid(margin-bottom,20px,40px);
+.why {
+    &__heading {
+        @include fluid(margin-bottom, 20px, 40px);
         color: #495677;
-        @include fluid(font-size, 20px , 30px);
+        @include fluid(font-size, 20px, 30px);
         font-style: normal;
         font-weight: 800;
         line-height: normal;
     }
-    &__text{
-        @include fluid(margin-bottom,60px,100px);
-        p{
+    &__text {
+        @include fluid(margin-bottom, 60px, 100px);
+        p {
             margin-bottom: 10px;
-            color:#495677;
-            @include fluid(font-size,16px,18px);
+            color: #495677;
+            @include fluid(font-size, 16px, 18px);
             font-style: normal;
             font-weight: 500;
             line-height: 24px; /* 133.333% */
-            &:last-child{
+            &:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
-.who{
+.work {
     background-image: url(/img/who_bg_square.png);
     background-repeat: no-repeat;
     background-size: cover;
-    @include fluid(margin-bottom,60px,100px);
-    &__conatiner{
+    @include fluid(margin-bottom, 60px, 100px);
+    &__conatiner {
         display: flex;
         align-items: end;
         justify-content: space-between;
     }
-    &__text{
-        @include fluid(padding-bottom,30px,70px);   @include fluid(padding-top,40px,80px);
+    &__text {
+        @include fluid(padding-bottom, 30px, 70px);
+        @include fluid(padding-top, 40px, 80px);
         width: 61%;
-        &-discription{
-            @include fluid(margin-bottom,30px,40px);
+        &-discription {
+            @include fluid(margin-bottom, 30px, 40px);
         }
-        p{
-            color: #E2E7F4;
-            @include fluid(font-size,16px,18px);
+        p {
+            color: #e2e7f4;
+            @include fluid(font-size, 16px, 18px);
             font-family: Raleway;
             font-size: 18px;
             font-weight: 500;
             line-height: 26px;
             letter-spacing: 0%;
-            &:last-child{
+            &:last-child {
                 margin-bottom: 0;
             }
-
         }
-        &-heading{
-            @include fluid(margin-bottom,40px,60px);
-            color: #FFF;
-            span{
-                color: #FF2574;
+        &-heading {
+            @include fluid(margin-bottom, 40px, 60px);
+            color: #fff;
+            span {
+                color: #ff2574;
                 margin-left: 40px;
             }
         }
-        &-work{
+        &-professions {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             gap: 15px;
             white-space: nowrap;
-           p{
-            margin: 0;
-            flex: 1;
-            border: 1px #A3ACC5 solid;
-            padding: 15px 30px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           } 
+            p {
+                margin: 0;
+                flex: 1;
+                border: 1px #a3acc5 solid;
+                padding: 15px 30px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
-    &__image{
+    &__image {
         width: 40%;
         height: 100%;
-        img{
+        img {
             object-fit: cover;
             height: 100%;
             margin-bottom: -4px;
-            @include fluid(width,600px,649px);
+            @include fluid(width, 600px, 649px);
         }
     }
 }
-.board{
-    @include fluid(padding-bottom,80px,100px);
-    &__header{
-        h2{width: 52%;}
+.board {
+    @include fluid(padding-bottom, 80px, 100px);
+    &__header {
+        h2 {
+            width: 52%;
+        }
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include fluid(margin-bottom,40px,60px);
+        @include fluid(margin-bottom, 40px, 60px);
     }
-    &__wrapper{
+    &__wrapper {
         align-items: stretch;
         padding-bottom: 20px;
     }
-    &__card{
-         @include fluid(padding,20px,30px);
-        background-color: #F6F8FD;
-        border: #E2E7F4 solid 1px;
+    &__card {
+        @include fluid(padding, 20px, 30px);
+        background-color: #f6f8fd;
+        border: #e2e7f4 solid 1px;
         border-radius: 20px;
-        box-shadow: 20px 20px 0px 0px #E2E7F4;
+        box-shadow: 20px 20px 0px 0px #e2e7f4;
         height: auto;
         color: #495677;
-        @include fluid(font-size,16px,18px);
+        @include fluid(font-size, 16px, 18px);
         font-weight: 500;
         line-height: 125%;
         letter-spacing: 0%;
         text-align: left;
     }
 }
-.experience{
-    @include fluid(margin-bottom,60px,80px);  
-    p{
+.experience {
+    @include fluid(margin-bottom, 60px, 80px);
+    p {
         color: #495677;
-        @include fluid(font-size,16px,18px);
+        @include fluid(font-size, 16px, 18px);
         font-weight: 500;
         line-height: 24px;
         letter-spacing: 0%;
     }
-    &__header{
-        @include fluid(margin-top,30px,50px);
-        @include fluid(margin-bottom,40px,60px);
+    &__header {
+        @include fluid(margin-top, 30px, 50px);
+        @include fluid(margin-bottom, 40px, 60px);
     }
-    &__wrapper{
+    &__wrapper {
         display: flex;
         align-items: start;
         justify-content: space-between;
-        &-text{
+        &-text {
             width: 55%;
-            @include fluid(margin-bottom,15px,25px);
-            p{
-                @include fluid(margin-bottom,15px,20px);
+            @include fluid(margin-bottom, 15px, 25px);
+            p {
+                @include fluid(margin-bottom, 15px, 20px);
                 width: 90%;
             }
-            li{
+            li {
                 height: 100%;
                 width: 80%;
                 display: flex;
                 margin-bottom: 20px;
-                @include fluid(margin-left,20px,40px);
+                @include fluid(margin-left, 20px, 40px);
                 color: #495677;
                 font-family: Raleway;
-                @include fluid(font-size,16px,18px);
+                @include fluid(font-size, 16px, 18px);
                 font-weight: 500;
                 line-height: 26px;
                 letter-spacing: 0%;
                 text-align: left;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0;
                 }
-                &::before{
+                &::before {
                     content: "";
                     position: relative;
                     margin-right: 10px;
@@ -425,89 +435,89 @@ body{font-variant-numeric: lining-nums proportional-nums;}
                 }
             }
         }
-        &-image{
-            img{
+        &-image {
+            img {
                 object-fit: cover;
                 width: 100%;
                 height: 432px;
             }
         }
     }
-    &__discription{
-        @include fluid(margin-bottom,40px,60px);
+    &__discription {
+        @include fluid(margin-bottom, 40px, 60px);
     }
-    &__partners{
-        &-header{
+    &__partners {
+        &-header {
             color: #495677;
-            @include fluid(font-size,20px,30px);
+            @include fluid(font-size, 20px, 30px);
             font-weight: 700;
             line-height: 35px;
             letter-spacing: 0%;
-            @include fluid(margin-bottom,20px,40px);
+            @include fluid(margin-bottom, 20px, 40px);
         }
-        p{
-            @include fluid(margin-bottom,40px,60px);
+        p {
+            @include fluid(margin-bottom, 40px, 60px);
         }
-        img{
+        img {
             object-fit: cover;
-            @include fluid(margin-bottom,40px,60px);  
-            border-radius: 20px;     
+            @include fluid(margin-bottom, 40px, 60px);
+            border-radius: 20px;
             height: 100%;
-            @include fluid(width,600px,860px)     
+            @include fluid(width, 600px, 860px);
         }
     }
-    &__research{
-        p{
+    &__research {
+        p {
             margin-bottom: 15px;
-            &:last-child{
+            &:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
-.study{
+.study {
     background: #f6f8fd;
-    @include fluid(padding-top,60px,80px); @include fluid(padding-bottom,60px,80px);
-    @include fluid(margin-bottom,60px,80px);
-    &__table{
-        @include fluid(margin-top,40px,60px);
+    @include fluid(padding-top, 60px, 80px);
+    @include fluid(padding-bottom, 60px, 80px);
+    @include fluid(margin-bottom, 60px, 80px);
+    &__table {
+        @include fluid(margin-top, 40px, 60px);
         display: flex;
         align-items: end;
         justify-content: space-between;
     }
-    &__card{
+    &__card {
         gap: 105px;
-       
-        &-title{
+
+        &-title {
             color: #495677;
-            @include fluid(font-size,18px,22px);
+            @include fluid(font-size, 18px, 22px);
             font-weight: 700;
             line-height: 125%;
             text-align: left;
-            @include fluid(margin-bottom,30px,40px);
+            @include fluid(margin-bottom, 30px, 40px);
         }
-        &-text{
+        &-text {
             color: #495677;
             font-family: Raleway;
-            @include fluid(font-size,16px,18px);
+            @include fluid(font-size, 16px, 18px);
             font-weight: 500;
             line-height: 125%;
             text-align: left;
-            @include fluid(margin-bottom,15px,20px);
-            &:last-child{
+            @include fluid(margin-bottom, 15px, 20px);
+            &:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
-.line__top{
+.line__top {
     width: 1px;
     height: 104px;
     background-color: #e2e7f4;
-
 }
-.banner{
-    @include fluid(margin-bottom,90px,110px);
+.banner {
+    @include fluid(margin-bottom, 90px, 110px);
     background-image: url(/img/MicroBGnn.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -515,29 +525,34 @@ body{font-variant-numeric: lining-nums proportional-nums;}
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
-    box-shadow: 20px 20px 0px 0px #E2E7F4;
-    &__header{
-        @include fluid(margin-bottom,20px,40px);
+    box-shadow: 20px 20px 0px 0px #e2e7f4;
+    &__header {
+        @include fluid(margin-bottom, 20px, 40px);
         color: #ffffff;
         font-weight: 800;
-        line-height: 40px;
+        @include fluid(line-height, 35px, 40px);
     }
-    p{
-        @include fluid(margin-bottom,20px,40px);
-        @include fluid(font-size,18px,22px);
+    p {
+        @include fluid(margin-bottom, 20px, 40px);
+        @include fluid(font-size, 18px, 22px);
+        @include fluid(line-height, 25px, 30px);
         font-weight: 500;
-        line-height: 30px;
     }
-    &__content{
-        @include fluid(padding-bottom,40px,60px); @include fluid(padding-top,40px,60px); @include fluid(padding-left,40px,60px);
-        color: #FFF;
+    &__content {
+        @include fluid(padding-bottom, 40px, 60px);
+        @include fluid(padding-top, 40px, 60px);
+        @include fluid(padding-left, 40px, 60px);
+        color: #fff;
     }
-    &__action{
+    &__action {
         display: flex;
         align-items: center;
-        a{white-space: nowrap;width: 44%;}
-        @include fluid(gap,25px,30px);
-        &-text{
+        a {
+            white-space: nowrap;
+            width: 44%;
+        }
+        @include fluid(gap, 25px, 30px);
+        &-text {
             display: flex;
             align-items: end;
             gap: 15px;
@@ -548,328 +563,328 @@ body{font-variant-numeric: lining-nums proportional-nums;}
             text-align: center;
             flex: 1;
             transform: translateY(20px);
-            p,a{
-                transform: rotate(6.99deg)translateY(-10px);
-                @include fluid(font-size,20px,26px);
+
+            p,
+            a {
+                transform: rotate(6.99deg) translateY(-10px);
+                @include fluid(font-size, 20px, 26px);
                 font-family: "euroscript Pro";
                 color: #e2e7f4;
                 margin: 0;
                 font-weight: 400;
+                width: 275px;
             }
-            a{
+            a {
                 text-decoration: underline;
             }
-            img{
-                @include fluid(width,105.18px,120.18px);
+            img {
+                @include fluid(width, 105.18px, 120.18px);
                 height: 67.65px;
                 object-fit: contain;
             }
         }
     }
-    &__image{
-        img{
+    &__image {
+        img {
             object-fit: cover;
-            @include fluid(width,286px,403px);
+            @include fluid(width, 286px, 403px);
         }
     }
 }
-@media screen and (max-width: 992px){
-    .hero__text{
+@media screen and (max-width: 992px) {
+    .hero__text {
         width: 100%;
     }
-    .hero__images{
+    .hero__images {
         display: none;
     }
-    .hero{
+    .hero {
         border-radius: 0 0 30px 30px;
-        &__action-text{
+        &__action-text {
             display: none;
         }
     }
-    .about{
-       margin-top: 30px;
-       margin-bottom: 50px;
-       &__text{
-        margin-bottom: 40px;
-       }
-        &__container{
+    .about {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        &__text {
+            margin-bottom: 40px;
+        }
+        &__container {
             flex-direction: column;
         }
-        &__card{
+        &__card {
             border-radius: 20px;
             flex: 1;
             width: 100%;
-            box-shadow: 20px 20px 0px 0px #E2E7F4;
-            &-title{
+            box-shadow: 20px 20px 0px 0px #e2e7f4;
+            &-title {
                 width: 100%;
-                span{display: none;}
+                span {
+                    display: none;
+                }
             }
         }
-    
     }
-    .teachers__discription p{
+    .teachers__discription p {
         width: 80%;
     }
-    .teachers__discription-container{
+    .teachers__discription-container {
         justify-content: right;
         width: 20%;
-        img,p{
+        img,
+        p {
             display: none;
         }
     }
-    .why{
-        &__text{
+    .why {
+        &__text {
             margin-bottom: 40px;
         }
-        
     }
-    .who{
+    .work {
         margin-bottom: 40px;
-        &__text{
+        &__text {
             width: 100%;
 
-            &-heading span{
+            &-heading span {
                 display: none;
             }
         }
-        &__image{
+        &__image {
             display: none;
         }
     }
     .board {
         padding-bottom: 10px;
     }
-    .board__header h2{
+    .board__header h2 {
         width: 80%;
     }
-    .experience__wrapper-text{
+    .experience__wrapper-text {
         width: 100%;
     }
-    .experience__wrapper-image{
+    .experience__wrapper-image {
         display: none;
-    } 
-    .experience__discription{
+    }
+    .experience__discription {
         margin-bottom: 30px;
     }
-    .banner{
+    .banner {
         position: relative;
-        &__header{
+        &__header {
             width: 100%;
         }
-        &__content{
+        &__content {
             width: 100%;
             padding: 30px;
-            p{width: 60%;}
+            p {
+                width: 60%;
+            }
         }
-        &__image{
+        &__image {
             position: absolute;
             right: 0;
             bottom: 0;
-            img{
+            img {
                 transform: translateY(30px);
             }
         }
     }
-    .banner__action-text{
+    .banner__action-text {
         display: none;
     }
 }
 
-@media screen and (max-width: 768px){
-    .headerThree {
+@media screen and (max-width: 768px) {
+    .heading__two {
         font-size: 25px;
     }
-    .hero__text p{
+    .hero__text p {
         font-size: 16px;
     }
-    .hero__text p:last-of-type{
+    .hero__text p:last-of-type {
         margin-bottom: 40px;
     }
-    .who__text p{
+    .work__text p {
         font-size: 16px;
     }
-    .about__text{
+    .about__text {
         margin-bottom: 25px;
     }
-    .about__heading{
+    .about__heading {
         margin-bottom: 20px;
     }
-    .about__card-title{
+    .about__card-title {
         margin-bottom: 15px;
     }
-    .about__card-list{
+    .about__card-list {
         margin-bottom: 15px;
-        li{
+        li {
             margin-bottom: 5px;
         }
-    } 
-    .who__text-heading{
+    }
+    .work__text-heading {
         margin-bottom: 20px;
     }
-    .teachers__card img{
+    .teachers__card img {
         height: 250px;
     }
-    .board__header h2{
+    .board__header h2 {
         width: 77%;
     }
-    .experience__header{
+    .experience__header {
         margin-top: 20px;
         margin-bottom: 30px;
     }
-    .experience__partners img{
+    .experience__partners img {
         width: 100%;
     }
-    .experience__wrapper-text li{
+    .experience__wrapper-text li {
         margin-bottom: 15px;
         margin-left: 15px;
     }
-    .experience__discription,.experience__partners img,.experience__partners p{
+    .experience__discription,
+    .experience__partners img,
+    .experience__partners p {
         margin-bottom: 25px;
     }
-    .experience{
+    .experience {
         margin-bottom: 40px;
     }
 
-    .study{
-        padding-bottom: 40px;padding-top: 40px;
+    .study {
+        padding-bottom: 40px;
+        padding-top: 40px;
         margin-bottom: 40px;
-        &__table{
+        &__table {
             flex-wrap: wrap;
-            
-            &-btn{
+
+            &-btn {
                 margin: 40px auto 0;
             }
         }
-
     }
 
-    .banner__image img{
+    .banner__image img {
         width: 240px;
     }
-    .banner__content p{
+    .banner__content p {
         font-size: 16px;
     }
 }
 
-@media screen and (max-width: 576px){
-    .hero__text p{
+@media screen and (max-width: 576px) {
+    .heading__two {
+        font-size: 20px;
+    }
+    .hero__text p {
         font-size: 14px;
     }
-    .hero__heading{
+    .hero__heading {
         margin-bottom: 15px;
     }
-    .hero__text p{
+    .hero__text p {
         margin-bottom: 10px;
     }
-    .breadcrumb{
+    .breadcrumb {
         flex-wrap: wrap;
     }
-    .teachers__discription{
+    .teachers__discription {
         flex-direction: column;
         align-items: start;
-        p{width: 100%;}
-        &-container{
+        p {
+            width: 100%;
+        }
+        &-container {
             width: 100%;
         }
     }
-    .teachers__card img{
+    .teachers__card img {
         height: 450px;
     }
-    .study{
-
-        &__card{
-            flex: 1;
-            min-width: 170px;
-            &-title{
+    .study {
+        &__table {
+            align-items: start;
+            flex-direction: column;
+        }
+        &__card {
+            width: 100%;
+            margin-bottom: 20px;
+            &-title {
                 margin-bottom: 15px;
             }
-            &-text{
+            &-text {
                 margin-bottom: 10px;
             }
         }
     }
-    .line__top{
+    .line__top {
         display: none;
         margin: 20px 0;
         width: 33%;
         height: 1px;
     }
     .study__table .study__card:last-of-type {
-        min-width: 100%;
-        margin-top: 20px;
+        margin-bottom: 0;
     }
-    .banner__content{
-        padding: 20px;
-        p{
+    .banner__header{
+        line-height: 30px;
+    }
+    .banner__content {
+        padding: 25px;
+        p {
             width: 100%;
         }
     }
-    .banner__action a{
+    .banner__action a {
         margin-bottom: 40px;
         width: 50%;
     }
-    .banner__image img{
+    .banner__image img {
         width: 210px;
     }
-
 }
 
-@media  screen and (max-width:440px) {
-    .teachers__card img{
+@media screen and (max-width: 440px) {
+    .teachers__card img {
         height: 60%;
     }
-    .banner__action a{
+    .banner__action a {
         margin-bottom: 10px;
         width: 200px;
     }
-    .banner__image img{
-       display: none;
+    .banner__image img {
+        display: none;
     }
 }
-@media screen and (max-width: 400px){
-    .hero__text p:last-of-type{
+@media screen and (max-width: 400px) {
+    .hero__text p:last-of-type {
         margin-bottom: 20px;
     }
-    .who__text-work{
+    .work__text-professions {
         flex-direction: column;
     }
-    .who__text p{
+    .work__text p {
         white-space: wrap;
         width: 100%;
         text-align: center;
     }
-    .board__header{
+    .board__header {
         flex-direction: column;
         align-items: start;
         margin-bottom: 20px;
-        h2{width: 100%;margin-bottom: 10px;}
+        h2 {
+            width: 100%;
+            margin-bottom: 10px;
+        }
     }
     .board__swipperBtn {
         width: 100%;
         justify-content: right;
     }
 
-    .study{
-        &__table{
-            flex-direction: column;
-            align-items: center;
-        }
-        &__card{
-            flex: 0;
-            min-width: 0;
-            margin-bottom: 20px;
-            width: 150px;
-            &-title{
-                margin-bottom: 15px;
-                text-align: left;
-            }
-            &-text{
-                margin-bottom: 10px;
-                text-align: left;
-            }
-        }
-    }
-    .line__top{
+    .line__top {
         display: none;
         margin: 20px 0;
         width: 33%;
@@ -879,5 +894,5 @@ body{font-variant-numeric: lining-nums proportional-nums;}
         min-width: 0;
         margin-top: 0;
         margin-bottom: 0;
-      }
+    }
 }
