@@ -1,4 +1,4 @@
-@import "./mixins";
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;800&display=swap");
 @font-face {
   font-family: "Euroscript Pro";
@@ -110,10 +110,20 @@ a {
   font-weight: 800;
   line-height: normal;
   position: relative;
+  &--mb50{
+    @include fluid(margin-bottom, 30px, 50px);
+  }
 }
 
 .heading__two {
   color: #495677;
+  @include fluid(font-size, 30px, 40px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.heading__two-white{
+  color: #fff;
   @include fluid(font-size, 30px, 40px);
   font-style: normal;
   font-weight: 800;
@@ -228,7 +238,8 @@ a {
       font-weight: 600;
     }
     img {
-      object-fit: contain;
+      -o-object-fit: contain;
+         object-fit: contain;
       @include fluid(width, 100px, 136px);
       @include fluid(height, 70px, 100px);
     }
@@ -255,6 +266,30 @@ a {
       border-radius: 10px;
       width: 100%;
       padding: 0 3px;
+      &::-webkit-input-placeholder {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &::-moz-placeholder {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:-ms-input-placeholder {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &::-ms-input-placeholder {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       &::placeholder {
         font-size: 14px;
         display: flex;
@@ -334,7 +369,7 @@ a {
 
 // nav
 .nav {
-  @include container;
+  border-bottom: #e2e7f4 solid 1px;
 }
 .navContainer {
   display: flex;
@@ -675,13 +710,13 @@ a {
   display: flex;
   gap: 10px;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 125%; /* 17.5px */
   @include fluid(margin-bottom, 30px, 50px);
   @include fluid(margin-top, 30px, 50px);
+  flex-wrap: wrap;
   &__link {
     color: #a3acc5;
   }
@@ -765,6 +800,12 @@ a {
   }
 }
 @media screen and (max-width: 992px) {
+  .nav {
+    border-bottom: none;
+  }
+  .nav .container{
+    max-width: 100%;
+  }
   .swipperArrowBtn a:hover {
     color: #a3acc5;
     &::before {
@@ -958,7 +999,7 @@ a {
   }
 
   .heading {
-    font-size: 38px;
+    font-size: 34px;
   }
   .titleIcon {
     font-size: 30px;

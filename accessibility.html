@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fonts/icomoon-v1.0/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./plugins/Accordion.JS/accordion.css">
+    <link rel="stylesheet" href="./css/style.css?v=0.001">
+    <title>ИРБИС</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headerContainer">
+            <div class="headerContainer__logo">
+                <div class="headerContainer__logo-wrapper" href="">
+                    <a href="/index.html">
+                        <div class="headerContainer__logo-img">
+                            <img src="./img/LOGO.png" alt="ИРБИС">
+                        </div>
+                        <p class="headerContainer__logo-text">Институт Развития Бизнеса и Стратегий</p>
+                    </a>
+                    <div class="burger__button">
+                        <div class="burger__menu-icon">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="burger__menu">
+                        <ul class="burger__menu-list" id="burger-dropdown">
+                            <div class="container">
+                                <form class="burger__menu-search">
+                                    <div class="input__conatiner">
+                                        <input type="text" placeholder="Поиск по сайту"><button
+                                            class="icon-search"></button>
+                                    </div>
+                                </form>
+                                <li class="burger__menu-item"><a href="">Главная</a></li>
+                                <li class="burger__menu-item"><a href="#">Новости</a></li>
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Колледж</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="burger__menu-item"><a href="#">Специальности</a></li>
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Жизнь наших студентов</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Школа бизнеса</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="burger__menu-item">
+                                    <a href="#" class="burger__menu-action">Сведения об организации</a>
+                                    <ul class="burger__menu-dropContent">
+                                        <li class="burger__menu-item"><a href="#">Ссылка 1</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 2</a></li>
+                                        <li class="burger__menu-item"><a href="#">Ссылка 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="burger__menu-item burger__menu-btn "><a class="burger__menu-button pinkBtn"
+                                        href="">Хочу на бюджет!</a></li>
+                                <li class="burger__menu-item"><a href=""
+                                        class="navContainer__accessibility navContainer__accessibility-burger">Для
+                                        слабовидящих</a></li>
+                                <li class="burger__menu-item burger__menu-info">
+                                    <a href="tel:+78452401711" class="burger__menu-tel">8 (8452) 40-17-11</a>
+                                    <a href="mailto:irbis.edu.saratov@gmail.com"
+                                        class="burger__menu-email ">irbis.edu.saratov@gmail.com</a>
+                                </li>
+                                <li class="burger__menu-item burger__menu-social">
+                                    <a href=""><span class="icon-VK"></span></a>
+                                    <a href=""><span class="icon-Telegram"></span></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form class="headerContainer__search">
+                <input type="text" placeholder="Поиск по сайту"><button class="icon-search"></button>
+            </form>
+            <div class="headerContainer__contacts">
+                <a class="pinkBtn" href="">Хочу на бюджет!</a>
+                <div class="headerContainer__contacts-social">
+                    <a href=""><span class="icon-VK"></span></a>
+                    <a href=""><span class="icon-Telegram"></span></a>
+                </div>
+                <div class="headerContainer__contacts-info">
+                    <a href="tel:+78452401711" class="headerContainer__contacts-tel">8 (8452) 40-17-11</a>
+                    <a href="mailto:irbis.edu.saratov@gmail.com"
+                        class="headerContainer__contacts-email">irbis.edu.saratov@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="line"></div>
+    <nav class="nav">
+        <div class="container">
+            <div class="navContainer">
+                <ul class="navContainer__list">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Новости</a></li>
+                    <li id="dropdown1" class="navContainer__list-dropdown">
+                        <a href="#" class="navContainer__list-button">Колледж</a><span id="arrow1"
+                            class="icon-arrow"></span>
+                        <div id="wrapper1" class="navContainer__list-wrapper">
+                            <ul id="content1" class="navContainer__list-dropdownContent">
+                                <li><a href="#">О колледже</a></li>
+                                <li><a href="#">Абитуриенту</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Специальности</a></li>
+                    <li id="dropdown2" class="navContainer__list-dropdown">
+                        <a href="#" class="navContainer__list-button">Жизнь наших студентов</a><span id="arrow2"
+                            class="icon-arrow"></span>
+                        <div id="wrapper2" class="navContainer__list-wrapper">
+                            <ul id="content2" class="navContainer__list-dropdownContent">
+                                <li><a href="#">Ссылка 1</a></li>
+                                <li><a href="#">Ссылка 2</a></li>
+                                <li><a href="#">Ссылка 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="dropdown3" class="navContainer__list-dropdown">
+                        <a href="#" class="navContainer__list-button">Школа бизнеса</a><span id="arrow3"
+                            class="icon-arrow"></span>
+                        <div id="wrapper3" class="navContainer__list-wrapper">
+                            <ul id="content3" class="navContainer__list-dropdownContent">
+                                <li><a href="#">Ссылка 1</a></li>
+                                <li><a href="#">Ссылка 2</a></li>
+                                <li><a href="#">Ссылка 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="dropdown4" class="navContainer__list-dropdown">
+                        <a href="#" class="navContainer__list-button">Сведения об организации</a><span id="arrow4"
+                            class="icon-arrow"></span>
+                        <div id="wrapper4" class="navContainer__list-wrapper">
+                            <ul id="content4" class="navContainer__list-dropdownContent">
+                                <li><a href="#">Ссылка 1</a></li>
+                                <li><a href="#">Ссылка 2</a></li>
+                                <li><a href="#">Ссылка 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="" class="navContainer__accessibility">Для слабовидящих</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="breadcrumb">
+            <a href="" class="breadcrumb__link">Главная</a>
+            <p class="breadcrumb__slash">/</p>
+            <a href="" class="breadcrumb__link">Сведения об организации</a>
+            <p class="breadcrumb__slash">/</p>
+            <p class="breadcrumb__page">Доступная среда
+            </p>
+        </div>
+        <div class="account">
+            <div class="container">
+                <h2 class="heading account__heading">Доступная среда</h2>
+                <div class="info__access">
+                    <p class="info__subTitle info__access-subTitle">Обеспечение беспрепятственного доступа в здание
+                        образовательной организации</p>
+                    <div class="table__three">
+                        <div class="table__three-cell">№ п/п</div>
+                        <div class="table__three-cell">Условия для получения образования обучающимися с ограниченными
+                            возможностями здоровья</div>
+                        <div class="table__three-cell">Наличие условий для получения образования обучающимися с
+                            ограниченными возможностями здоровья (да/нет, комментарии)</div>
+                        <div class="table__three-cell">1</div>
+                        <div class="table__three-cell">Обеспечение беспрепятственного доступа обучающихся с
+                            ограниченными возможностями здоровья, имеющих нарушения опорно-двигательного аппарата, в
+                            учебные помещения и другие помещения</div>
+                        <div class="table__three-cell">кнопка вызова при входе, гусеничный мобильный лестничный
+                            подъемник Т09 «ROBY»</div>
+                        <div class="table__three-cell">2</div>
+                        <div class="table__three-cell">Обеспечение беспрепятственного доступа обучающихся с
+                            ограниченными возможностями здоровья, имеющих нарушения опорно-двигательного аппарата, в
+                            учебные помещения и другие помещения</div>
+                        <div class="table__three-cell">кнопка вызова при входе, гусеничный мобильный лестничный
+                            подъемник Т09 «ROBY»</div>
+                    </div>
+                </div>
+                <div class="info__resurses">
+                    <p class="info__subTitle">Об электронных образовательных ресурсах</p>
+                    <p class="info__text">с 2019 года ИРБиС участвует в реализации Национальных проектов:</p>
+                    <div class="info__list">
+                        <ul class="info__list-ul">
+                            <li class="info__list-li">ЭБС “PROFSPO” (Общество с ограниченной ответственностью
+                                “Профобразование”)</li>
+                            <li class="info__list-li">VR – тренажер “Искусство публичных выступлений” (ООО “Цереврум”)
+                            </li>
+                            <li class="info__list-li">АО “Издательство “Просвещение”</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info__wifi">
+                    <p class="info__subTitle">
+                        Информация о доступе к информационным системам и информационно-телекоммуникационным сетям
+                    </p>
+                    <div class="info__mainText">
+                        <p>
+                            Доступ к информационным системам и информационно-телекоммуникационным сетям предоставлен из
+                            локальной сети института со стационарных компьютеров, с личных компьютеров, с мобильных
+                            устройств с использованием сети wi-fi.
+                        </p>
+                        <p>
+                            В образовательном процессе для обучающихся используются образовательные технологии,
+                            предусматривающие возможность приема-передачи информации в доступных формах.
+                        </p>
+                    </div>
+                </div>
+                <div class="info__building">
+                    <p class="info__subTitle info__access-subTitle">Обеспечение беспрепятственного доступа в здание
+                        образовательной
+                        организации</p>
+                    <div class="table__two">
+                        <div class="table__two-cell">Наименование</div>
+                        <div class="table__two-cell">Количество</div>
+                        <div class="table__two-cell">Наличие в образовательной организации электронной
+                            информационно-образовательной среды</div>
+                        <div class="table__two-cell">да</div>
+                        <div class="table__two-cell">Наличие в образовательной организации электронной
+                            информационно-образовательной среды</div>
+                        <div class="table__two-cell">да</div>
+                        <div class="table__two-cell">Наличие в образовательной организации электронной
+                            информационно-образовательной среды</div>
+                        <div class="table__two-cell">да</div>
+                        <div class="table__two-cell">Наличие в образовательной организации электронной
+                            информационно-образовательной среды</div>
+                        <div class="table__two-cell">да</div>
+                    </div>
+                </div>
+                <div class="info__sports">
+                    <p class="info__subTitle">Объекты спорта</p>
+                    <p class="info__discription">Занятия физической культурой проводятся на основании договора аренды с
+                        ИП Удодов В.И.</p>
+                </div>
+                <div class="info__accessibility">
+                    <p class="info__subTitle">Информация о наличии специальных технических средств обучения
+                        коллективного и индивидуального пользования для инвалидов и лиц с ограниченными возможностями
+                        здоровья</p>
+                    <p class="info__discription">Для инвалидов и лиц с ограниченными возможностями здоровья открыт
+                        доступ к
+                        электронной-библиотечной системе «PROFSPO», обладающей всеми опциями для инвалидов различных
+                        нозологий. Библиотечный фонд «PROFSPO» и располагает учебной литературой для учебной и вне
+                        учебной работы с инвалидами и лицами с ОВЗ. Специальные учебные пособия и учебники для
+                        обучающихся с нарушениями зрения, слуха. Специальная версия сайтов для слабовидящих и
+                        слабослышащих расположена на главной странице.</p>
+                    <p class="info__discription">Мультимедийные средства приема-передачи информации, которыми
+                        оборудованы специализированные
+                        аудитории, предусматривают наличие программного обеспечения альтернативного ввода информации в
+                        доступных формах для студентов с нарушениями опорно-двигательного аппарата. В работе с такими
+                        группами студентов рекомендовано использование специальных возможностей операционной системы
+                        Windows, таких как экранная клавиатура, с помощью которой можно вводить текст, используя лишь
+                        компьютерную мышь.</p>
+                    <p class="info__discription">Обучающиеся обеспечиваются программным обеспечением, адаптированным для
+                        студентов с ограниченными
+                        возможностями здоровья и инвалидов. В том числе Windows media player, обеспечивающий просмотр
+                        видеофайлов в форматах AVI, MPEG, DivX, WMV, пакет Microsoft Office, позволяющий использовать
+                        «горячие клавиши», изменение размера и масштаба, изменения цвета шрифта, экранную лупу, экранную
+                        клавиатуру, экранного диктора, оптимизацию изображения на экране, упрощение работы с мышью
+                        (специальные возможности операционной системы Microsoft Windows).</p>
+                </div>
+                <div class="info__practice">
+                    <p class="info__subTitle info__access-subTitle">Сведения о специально оборудованных учебных
+                        кабинетах приспособленных
+                        объектах для проведения практических занятий</p>
+                    <div class="info__practice-table">
+                        <div class="table__five">
+                            <div class="table__five-cell">Адрес</div>
+                            <div class="table__five-cell">Наименование оборудованных учебных кабинетов/объектов для
+                                проведения практических занятий</div>
+                            <div class="table__five-cell">Оснащенность оборудованных учебных кабинетов/объектов для
+                                проведения практических занятий</div>
+                            <div class="table__five-cell">Оснащенность оборудованных учебных кабинетов/объектов для
+                                проведения практических занятий</div>
+                            <div class="table__five-cell">Оснащенность оборудованных учебных кабинетов/объектов для
+                                проведения практических занятий</div>
+                            <div class="table__five-cell">410012, г. Саратов, ул. Университетская, д №36, стр 1</div>
+                            <div class="table__five-cell">Учебная аудитория № 406, 407, 408, 412,415, 506/1, 506/2, 508,
+                                510
+                                лекционного типа, занятий семинарского типа, групповых и индивидуальных консультаций,
+                                текущего контроля и промежуточной аттестации</div>
+                            <div class="table__five-cell">Стандартная учебная мебель: Доска аудиторная; Столы; Стулья.
+                                Оборудование, технические средства обучения: Проектор; проекционный экран; Колонки; ПК.
+                                Учебно-наглядные пособия: стенды.</div>
+                            <div class="table__five-cell">Достаточная ширина дверных проемов для проезда инвалидной
+                                коляски.
+                                Обеспечена возможность беспрепятственного доступа для слабовидящих, слабослышащих, лиц с
+                                инвалидностью по общим заболеваниям. Надлежащее размещение оборудования, для обеспечения
+                                беспрепятственного доступа к объектам. Использование электронных образовательных
+                                ресурсов, в
+                                формах, адаптированных к ограничениям здоровья.</div>
+                            <div class="table__five-cell">Да</div>
+                            <div class="table__five-cell">410012, г. Саратов, ул. Университетская, д №36, стр 1</div>
+                            <div class="table__five-cell">Учебная аудитория № 406, 407, 408, 412,415, 506/1, 506/2, 508,
+                                510
+                                лекционного типа, занятий семинарского типа, групповых и индивидуальных консультаций,
+                                текущего контроля и промежуточной аттестации</div>
+                            <div class="table__five-cell">Стандартная учебная мебель: Доска аудиторная; Столы; Стулья.
+                                Оборудование, технические средства обучения: Проектор; проекционный экран; Колонки; ПК.
+                                Учебно-наглядные пособия: стенды.</div>
+                            <div class="table__five-cell">Достаточная ширина дверных проемов для проезда инвалидной
+                                коляски.
+                                Обеспечена возможность беспрепятственного доступа для слабовидящих, слабослышащих, лиц с
+                                инвалидностью по общим заболеваниям. Надлежащее размещение оборудования, для обеспечения
+                                беспрепятственного доступа к объектам. Использование электронных образовательных
+                                ресурсов, в
+                                формах, адаптированных к ограничениям здоровья.</div>
+                            <div class="table__five-cell">Да</div>
+                            <div class="table__five-cell">410012, г. Саратов, ул. Университетская, д №36, стр 1</div>
+                            <div class="table__five-cell">Учебная аудитория № 406, 407, 408, 412,415, 506/1, 506/2, 508,
+                                510
+                                лекционного типа, занятий семинарского типа, групповых и индивидуальных консультаций,
+                                текущего контроля и промежуточной аттестации</div>
+                            <div class="table__five-cell">Стандартная учебная мебель: Доска аудиторная; Столы; Стулья.
+                                Оборудование, технические средства обучения: Проектор; проекционный экран; Колонки; ПК.
+                                Учебно-наглядные пособия: стенды.</div>
+                            <div class="table__five-cell">Достаточная ширина дверных проемов для проезда инвалидной
+                                коляски.
+                                Обеспечена возможность беспрепятственного доступа для слабовидящих, слабослышащих, лиц с
+                                инвалидностью по общим заболеваниям. Надлежащее размещение оборудования, для обеспечения
+                                беспрепятственного доступа к объектам. Использование электронных образовательных
+                                ресурсов, в
+                                формах, адаптированных к ограничениям здоровья.</div>
+                            <div class="table__five-cell">Да</div>
+                            <div class="table__five-cell">410012, г. Саратов, ул. Университетская, д №36, стр 1</div>
+                            <div class="table__five-cell">Учебная аудитория № 406, 407, 408, 412,415, 506/1, 506/2, 508,
+                                510
+                                лекционного типа, занятий семинарского типа, групповых и индивидуальных консультаций,
+                                текущего контроля и промежуточной аттестации</div>
+                            <div class="table__five-cell">Стандартная учебная мебель: Доска аудиторная; Столы; Стулья.
+                                Оборудование, технические средства обучения: Проектор; проекционный экран; Колонки; ПК.
+                                Учебно-наглядные пособия: стенды.</div>
+                            <div class="table__five-cell">Достаточная ширина дверных проемов для проезда инвалидной
+                                коляски.
+                                Обеспечена возможность беспрепятственного доступа для слабовидящих, слабослышащих, лиц с
+                                инвалидностью по общим заболеваниям. Надлежащее размещение оборудования, для обеспечения
+                                беспрепятственного доступа к объектам. Использование электронных образовательных
+                                ресурсов, в
+                                формах, адаптированных к ограничениям здоровья.</div>
+                            <div class="table__five-cell">Да</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info__conditions">
+                    <p class="info__subTitle">Специальные условия питания</p>
+                    <p class="info__discription">
+                        Горячее питание организовано по договору с ИП Горбач С.Л.
+                    </p>
+                </div>
+                <div class="info__conditions">
+                    <p class="info__subTitle">Спеуиальные условия охраны здоровья</p>
+                    <p class="info__discription">
+                        Медицинское обслуживание организовано по договору с ООО “Первый ДМЦ”
+                    </p>
+                </div>
+                <div class="info__conditions">
+                    <p class="info__subTitle">О наличии условий для беспрепятственного доступа в общежитии, интернат</p>
+                    <p class="info__discription">
+                        Общежития и интерната нет
+                    </p>
+                </div>
+                <div class="info__conditions">
+                    <p class="info__subTitle">О количестве жилых помещений в интернате, приспособленных для
+                        использования инвалидами и лицами с ограниченными возможностями здоровья</p>
+                    <p class="info__discription">
+                        Общежития и интерната нет
+                    </p>
+                </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footer__header">
+                <div class="footer__header-logo">
+                    <img src="./img/LOGO_footer.png" alt="LOGO">
+                    <p>Институт Развития Бизнеса и Стратегий</p>
+                </div>
+                <div class="footer__header-adress">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footer__header-contacts">
+                    <div class="footer__header-social">
+                        <a href=""><span class="icon-VK"></span></a>
+                        <a href=""><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footer__header-phone">
+                        <a href="tel:+78452401711" class="footer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com"
+                            class="footer__header-email">irbis.edu.saratov@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer__middle footer__middle-mobile">
+                    <div class="footer__middle-links footer__middle-links--mobile">
+                        <a href="#">Студенческая жизнь</a>
+                        <a href="#">Образовательные треки</a>
+                        <a href="#">Анонсы мероприятий</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__middle">
+                <div class="footer__middle-links">
+                    <a href="#">Студенческая жизнь</a>
+                    <a href="#">Образовательные треки</a>
+                    <a href="#">Анонсы мероприятий</a>
+                </div>
+                <div class="footer__middle-privicy">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__header-adress footer__header-adress--mobile">
+                    <p>г. Саратов, ул. Университетская, д. №36 строение 1</p>
+                    <p>ПН-ПТ с 9.00 до 18.00</p>
+                </div>
+                <div class="footer__header-contacts footer__header-contacts--mobile">
+                    <div class="footer__header-social">
+                        <a href=""><span class="icon-VK"></span></a>
+                        <a href=""><span class="icon-Telegram"></span></a>
+                    </div>
+                    <div class="footer__header-phone">
+                        <a href="tel:+78452401711" class="footer__header-tel">8 (8452) 40-17-11</a>
+                        <a href="mailto:irbis.edu.saratov@gmail.com"
+                            class="footer__header-email">irbis.edu.saratov@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-copyright">
+                    <p>2023 © Институт Развития Бизнеса и Стратегий. Все права защищены</p>
+                </div>
+                <div class="footer__middle-privicy footer__middle-privicy--mobile">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <a href="" class="footer__bottom-develop">
+                    Разработка сайта
+                    <img src="./img/SpaceApp.svg" alt="SpaceApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./plugins/Accordion.JS/accordion.js"></script>
+    <script src="./js/script.js?v=0.001"></script>
+</body>
+
+</html>

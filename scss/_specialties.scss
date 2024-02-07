@@ -1,0 +1,9 @@
+
+.specialtiesPage__college {
+  @include fluid(padding-top, 30px, 60px);
+  @include fluid(padding-bottom, 100px, 191px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include fluid(gap, 10px, 15px);
+}

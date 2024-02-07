@@ -104,52 +104,54 @@
     </header>
     <div class="line"></div>
     <nav class="nav">
-        <div class="navContainer">
-          <ul class="navContainer__list">
-            <li><a href="">Главная</a></li>
-            <li><a href="">Новости</a></li>
-            <li id="dropdown1" class="navContainer__list-dropdown">
-              <a href="#" class="navContainer__list-button">Колледж</a><span id="arrow1" class="icon-arrow"></span>
-              <div id="wrapper1" class="navContainer__list-wrapper">
-                <ul id="content1" class="navContainer__list-dropdownContent">
-                  <li><a href="#">О колледже</a></li>
-                  <li><a href="#">Абитуриенту</a></li>
+        <div class="container">
+            <div class="navContainer">
+                <ul class="navContainer__list">
+                  <li><a href="">Главная</a></li>
+                  <li><a href="">Новости</a></li>
+                  <li id="dropdown1" class="navContainer__list-dropdown">
+                    <a href="#" class="navContainer__list-button">Колледж</a><span id="arrow1" class="icon-arrow"></span>
+                    <div id="wrapper1" class="navContainer__list-wrapper">
+                      <ul id="content1" class="navContainer__list-dropdownContent">
+                        <li><a href="#">О колледже</a></li>
+                        <li><a href="#">Абитуриенту</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Специальности</a></li>
+                  <li id="dropdown2" class="navContainer__list-dropdown">
+                    <a href="#" class="navContainer__list-button">Жизнь наших студентов</a><span id="arrow2" class="icon-arrow"></span>
+                    <div id="wrapper2" class="navContainer__list-wrapper">
+                      <ul id="content2" class="navContainer__list-dropdownContent">
+                        <li><a href="#">Ссылка 1</a></li>
+                        <li><a href="#">Ссылка 2</a></li>
+                        <li><a href="#">Ссылка 3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li id="dropdown3" class="navContainer__list-dropdown">
+                    <a href="#" class="navContainer__list-button">Школа бизнеса</a><span id="arrow3" class="icon-arrow"></span>
+                    <div id="wrapper3" class="navContainer__list-wrapper">
+                      <ul id="content3" class="navContainer__list-dropdownContent">
+                        <li><a href="#">Ссылка 1</a></li>
+                        <li><a href="#">Ссылка 2</a></li>
+                        <li><a href="#">Ссылка 3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li id="dropdown4" class="navContainer__list-dropdown">
+                    <a href="#" class="navContainer__list-button">Сведения об организации</a><span id="arrow4" class="icon-arrow"></span>
+                    <div id="wrapper4" class="navContainer__list-wrapper">
+                      <ul id="content4" class="navContainer__list-dropdownContent">
+                        <li><a href="#">Ссылка 1</a></li>
+                        <li><a href="#">Ссылка 2</a></li>
+                        <li><a href="#">Ссылка 3</a></li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
+                <a href="" class="navContainer__accessibility">Для слабовидящих</a>
               </div>
-            </li>
-            <li><a href="#">Специальности</a></li>
-            <li id="dropdown2" class="navContainer__list-dropdown">
-              <a href="#" class="navContainer__list-button">Жизнь наших студентов</a><span id="arrow2" class="icon-arrow"></span>
-              <div id="wrapper2" class="navContainer__list-wrapper">
-                <ul id="content2" class="navContainer__list-dropdownContent">
-                  <li><a href="#">Ссылка 1</a></li>
-                  <li><a href="#">Ссылка 2</a></li>
-                  <li><a href="#">Ссылка 3</a></li>
-                </ul>
-              </div>
-            </li>
-            <li id="dropdown3" class="navContainer__list-dropdown">
-              <a href="#" class="navContainer__list-button">Школа бизнеса</a><span id="arrow3" class="icon-arrow"></span>
-              <div id="wrapper3" class="navContainer__list-wrapper">
-                <ul id="content3" class="navContainer__list-dropdownContent">
-                  <li><a href="#">Ссылка 1</a></li>
-                  <li><a href="#">Ссылка 2</a></li>
-                  <li><a href="#">Ссылка 3</a></li>
-                </ul>
-              </div>
-            </li>
-            <li id="dropdown4" class="navContainer__list-dropdown">
-              <a href="#" class="navContainer__list-button">Сведения об организации</a><span id="arrow4" class="icon-arrow"></span>
-              <div id="wrapper4" class="navContainer__list-wrapper">
-                <ul id="content4" class="navContainer__list-dropdownContent">
-                  <li><a href="#">Ссылка 1</a></li>
-                  <li><a href="#">Ссылка 2</a></li>
-                  <li><a href="#">Ссылка 3</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <a href="" class="navContainer__accessibility">Для слабовидящих</a>
         </div>
    </nav>
       
@@ -289,21 +291,21 @@
                 </div>
             </div>
         </div>
-        <div class="news">
-            <div class="news__header">
-                <div class="news__header-title">
+        <div class="newsIndex">
+            <div class="newsIndex__header">
+                <div class="newsIndex__header-title">
                     <h2 class="heading">Новости</h2>
                     <img src="./img/draw.svg" alt="draw">
                 </div>
-                <div class="news__header-swipperBtn">
-                    <a href="#" class="news__header-leftBtn"><span class="icon-arrow"></span></a>
-                    <a href="#" class="news__header-rightBtn"><span class="icon-arrow"></span></a>
+                <div class="newsIndex__header-swipperBtn">
+                    <a href="#" class="newsIndex__header-leftBtn"><span class="icon-arrow"></span></a>
+                    <a href="#" class="newsIndex__header-rightBtn"><span class="icon-arrow"></span></a>
                 </div>                  
             </div>
-            <div class="news__swipper">
-                <div class="swiper newsSwiper">
-                    <div class="swiper-wrapper newsSwiper__wrapper">
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+            <div class="newsIndex__swipper">
+                <div class="swiper newsIndexSwiper">
+                    <div class="swiper-wrapper newsIndexSwiper__wrapper">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG1.png" alt="CardBG">
                             </div>
@@ -314,7 +316,7 @@
                                 <p class="swipperCard__footer">Читать далее<span class="icon-arrow"></span></p>
                             </div>
                         </a>
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG2.png" alt="CardBG">
                             </div>
@@ -325,7 +327,7 @@
                                 <p class="swipperCard__footer">Читать далее<span class="icon-arrow"></span></p>
                             </div>
                         </a>
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG3.png" alt="CardBG">
                             </div>
@@ -336,7 +338,7 @@
                                 <p class="swipperCard__footer">Читать далее<span class="icon-arrow"></span></p>
                             </div>
                         </a>
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG4.png" alt="CardBG">
                             </div>
@@ -347,7 +349,7 @@
                                 <p class="swipperCard__footer">Читать далее<span class="icon-arrow"></span></p>
                             </div>
                         </a>
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG1.png" alt="CardBG">
                             </div>
@@ -358,7 +360,7 @@
                                 <p class="swipperCard__footer">Читать далее<span class="icon-arrow"></span></p>
                             </div>
                         </a>
-                        <a href="" class="swiper-slide newsSwiper__slide swipperCard">
+                        <a href="" class="swiper-slide newsIndexSwiper__slide swipperCard">
                             <div class="swipperCard__img">
                                 <img src="./img/CardBG2.png" alt="CardBG">
                             </div>
